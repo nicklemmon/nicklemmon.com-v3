@@ -12,6 +12,8 @@ var globSass = require('gulp-sass-glob');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
 var concatJS = require('gulp-concat');
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
 
 //////////////////////////
 //== Global variables ==//
@@ -41,6 +43,13 @@ gulp.task('clean', function() {
     .pipe(clean());
 })
 
+// BrowerSync stuff for a local server and cross-browser refreshing
+gulp.task('browser-sync', function() {
+    browserSync({
+        server: "./_dist"
+    })
+})
+
 // Build some pages and such
 gulp.task('markup', function() {
   var YOUR_LOCALS = {}; // TODO - figure this -ish out - probably an alternative to Jekyll config file?
@@ -52,7 +61,7 @@ gulp.task('markup', function() {
       locals: YOUR_LOCALS
     }))
     .pipe(gulp.dest(base.dist))
-});
+})
 
 // Glob stuff and spit out some styles
 gulp.task('styles', function() {
@@ -74,12 +83,21 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest(base.dist + path.js))
 })
 
+
+///////////////////////////////////////
+//== Run Those Tasks (IF YOU DARE) ==//
+///////////////////////////////////////
+
 // Default task
 gulp.task('default', ['clean'], function() {
   gulp.run('markup');
   gulp.run('styles');
   gulp.run('scripts');
-});
+})
 
 // Watch task
-gulp.task('watch', ['sass:watch'])
+gulp.task('watch', ['browser-sync'], function() {
+  gulp.watch(base.src + path.js + '**/*.js', ['scripts']).on('change', reload);
+  gulp.watch(base.src + path.styles + '**/*.scss', ['styles']).on('change', reload);
+  gulp.watch(base.src + path.markup + '**/*.pug', ['markup']).on('change', reload);
+})
