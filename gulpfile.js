@@ -77,8 +77,12 @@ gulp.task('styles', function() {
 
 // Concat and uglify the JavaScript
 gulp.task('scripts', function() {
-  return gulp.src(base.src + path.js + '**/*.js')
-    .pipe(concatJS('concat.js'))
+  return gulp.src([
+    base.src + path.js + 'vendor/*.js',
+    base.src + path.js + 'base/*.js',
+    base.src + path.js + 'modules/*.js'
+  ])
+    .pipe(concatJS('scripts.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest(base.dist + path.js))
 })
@@ -93,10 +97,11 @@ gulp.task('default', ['clean'], function() {
   gulp.run('markup');
   gulp.run('styles');
   gulp.run('scripts');
+  gulp.run('watch');
 })
 
 // Watch task
-gulp.task('watch', ['browser-sync'], function() {
+gulp.task('watch', ['default', 'browser-sync'], function() {
   gulp.watch(base.src + path.js + '**/*.js', ['scripts']).on('change', reload);
   gulp.watch(base.src + path.styles + '**/*.scss', ['styles']).on('change', reload);
   gulp.watch(base.src + path.markup + '**/*.pug', ['markup']).on('change', reload);
