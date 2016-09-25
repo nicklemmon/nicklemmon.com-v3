@@ -6,6 +6,8 @@
 
 var gulp = require('gulp');
 var clean = require('gulp-clean');
+var swig = require('gulp-swig');
+var data = require('gulp-data');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var globSass = require('gulp-sass-glob');
@@ -29,7 +31,8 @@ var base = {
 var path = {
   styles: 'styles/',
   markup: 'markup/',
-  js: 'js/'
+  js: 'js/',
+  data: 'data/'
 }
 
 
@@ -50,16 +53,19 @@ gulp.task('browser-sync', function() {
     })
 })
 
+// Get some data
+var getJsonData = function(file) {
+  return require(base.src + '/data/locals.json');
+};
+
 // Build some pages and such
 gulp.task('markup', function() {
-  var YOUR_LOCALS = {}; // TODO - figure this -ish out - probably an alternative to Jekyll config file?
-
   return gulp.src([
     base.src + path.markup + '**/!(_)*.pug' // all pug files are compiled, except those beginning with an '_'
   ])
-    .pipe(pug({
-      locals: YOUR_LOCALS
-    }))
+    .pipe(data(getJsonData))
+    .pipe(swig())
+    .pipe(pug())
     .pipe(gulp.dest(base.dist))
 })
 
