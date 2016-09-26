@@ -35,6 +35,11 @@ var path = {
   data: 'data/'
 }
 
+// Get some data
+var getJsonData = function(file) {
+  return require(base.src + '/data/locals.json');
+};
+
 
 ///////////////
 //== Tasks ==//
@@ -52,11 +57,6 @@ gulp.task('browser-sync', function() {
         server: "./_dist"
     })
 })
-
-// Get some data
-var getJsonData = function(file) {
-  return require(base.src + '/data/locals.json');
-};
 
 // Build some pages and such
 gulp.task('markup', function() {
