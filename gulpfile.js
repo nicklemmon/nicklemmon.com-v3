@@ -64,7 +64,7 @@ gulp.task('markup', function() {
     base.src + path.markup + '**/!(_)*.pug' // all pug files are compiled, except those beginning with an '_'
   ])
     .pipe(data(getJsonData))
-    .pipe(swig())
+    .pipe(swig({defaults: { cache: false }}))
     .pipe(pug())
     .pipe(gulp.dest(base.dist))
 })
@@ -110,5 +110,6 @@ gulp.task('default', ['clean'], function() {
 gulp.task('watch', ['default', 'browser-sync'], function() {
   gulp.watch(base.src + path.js + '**/*.js', ['scripts']).on('change', reload);
   gulp.watch(base.src + path.styles + '**/*.scss', ['styles']).on('change', reload);
+  gulp.watch(base.src + path.data + '**/*.json', ['markup']).on('change', reload);
   gulp.watch(base.src + path.markup + '**/*.pug', ['markup']).on('change', reload);
 })
