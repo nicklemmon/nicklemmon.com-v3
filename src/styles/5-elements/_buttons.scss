@@ -1,1 +1,30 @@
 //== Buttons ==//
+
+.button {
+  display: inline-block;
+  position: relative;
+  padding: 1.25rem 2.5rem;
+  font-size: 1.625rem;
+  font-family: $fontStack--secondary;
+  letter-spacing: 0.1rem;
+  border-radius: 9px;
+
+  &:after { // box-shadow
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 25%;
+    height: 2rem;
+    width: 50%;
+    box-shadow: 0 0.1rem 8px -0.2rem rgba(#000, 0.3);
+  }
+}
+
+  .button--primary {
+    color: $color--white;
+    text-shadow: 0 0.1rem 5px rgba(#000, 0.1);
+    border: 0.1rem solid $color--secondaryDark;
+    background: linear-gradient(0deg, $color--secondaryDark, $color--secondary);
+  }
