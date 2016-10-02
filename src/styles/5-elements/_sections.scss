@@ -1,1 +1,17 @@
 //== Section Styles ==//
+
+
+.sect {
+
+}
+
+  .sect__container {
+    max-width: 844px;
+    padding: $spacing--xl $spacing--md;
+    margin: 0 auto;
+  }
+
+.sect--alt {
+  color: $color--white;
+  background: $color--primary;
+}
