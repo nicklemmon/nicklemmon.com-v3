@@ -8,6 +8,7 @@
   font-family: $fontStack--secondary;
   letter-spacing: 0.1rem;
   border-radius: 9px;
+  cursor: pointer;
 
   &:after { // box-shadow
     content: '';
