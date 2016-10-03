@@ -28,6 +28,8 @@
   }
 }
 
+
+//== Hero-specific styles
 .sect--hero {
   display: flex;
   align-items: center;
@@ -41,4 +43,24 @@
 
 .sect--hero__tagline {
   text-shadow: 0 0.2rem 3px rgba($color--primaryDark, 0.5);
+}
+
+.sect--hero__tagline.tagline--h2 {
+  
+  @media screen and (min-width: $breakpoint--sm) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before,
+    &:after {
+      content: '';
+      margin: $spacing--sm;
+      display: block;
+      height: 1px;
+      width: 100%;
+      max-width: 60px;
+      background: $color--white;
+    }
+  }
 }
