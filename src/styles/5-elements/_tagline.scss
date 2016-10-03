@@ -5,13 +5,11 @@
 }
 
 .tagline--h1 {
-  font-family: $fontStack--secondary;
-  font-size: 4.75rem;
   margin-bottom: $spacing--md;
 }
 
 .tagline--h2 {
   font-weight: 200;
-  font-size: 3.5rem;
+  font-family: $fontStack--primary;
   margin-bottom: $spacing--xl;
 }
