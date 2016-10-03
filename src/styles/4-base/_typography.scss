@@ -24,6 +24,11 @@ h4 {
   font-size: 0.89rem;
 }
 
+hr {
+  max-width: 15px;
+  margin: $spacing--md 0;
+}
+
 p {
   font-size: 1.7rem;
   line-height: 1.6;
