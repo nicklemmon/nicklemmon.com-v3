@@ -1,0 +1,8 @@
+//== Colors ==//
+
+$color--base:       #141B40;
+$color--white:      #FFF;
+$color--primary:    #4B66E8;
+  $color--primaryDark: scale-color($color--primary, $lightness: -15%);
+$color--secondary:  #4AE8C1;
+  $color--secondaryDark: scale-color($color--secondary, $lightness: -20%);

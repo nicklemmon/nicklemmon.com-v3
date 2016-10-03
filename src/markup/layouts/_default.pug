@@ -1,9 +1,12 @@
 doctype html
 
 html
-  head
-    meta(charset="utf-8")
-    title Nick Lemmon - front end web designer in Durham, NC
+  include ../partials/_head.pug
 
   body
-    block content
+    include ../partials/_nav.pug
+
+    main.content
+      block content
+
+    include ../partials/_footer.pug

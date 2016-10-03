@@ -6,12 +6,16 @@
 
 var gulp = require('gulp');
 var clean = require('gulp-clean');
+var swig = require('gulp-swig');
+var data = require('gulp-data');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var globSass = require('gulp-sass-glob');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
 var concatJS = require('gulp-concat');
+var imageMin = require('gulp-imagemin');
+var webP = require('gulp-webp');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
@@ -29,8 +33,15 @@ var base = {
 var path = {
   styles: 'styles/',
   markup: 'markup/',
-  js: 'js/'
+  js: 'js/',
+  data: 'data/',
+  images: 'images/'
 }
+
+// Get some data
+var getJsonData = function(file) {
+  return require(base.src + '/data/locals.json');
+};
 
 
 ///////////////
@@ -52,14 +63,12 @@ gulp.task('browser-sync', function() {
 
 // Build some pages and such
 gulp.task('markup', function() {
-  var YOUR_LOCALS = {}; // TODO - figure this -ish out - probably an alternative to Jekyll config file?
-
   return gulp.src([
     base.src + path.markup + '**/!(_)*.pug' // all pug files are compiled, except those beginning with an '_'
   ])
-    .pipe(pug({
-      locals: YOUR_LOCALS
-    }))
+    .pipe(data(getJsonData))
+    .pipe(swig({defaults: { cache: false }}))
+    .pipe(pug())
     .pipe(gulp.dest(base.dist))
 })
 
@@ -87,6 +96,13 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest(base.dist + path.js))
 })
 
+// Minify images
+gulp.task('images', function() {
+  return gulp.src(base.src + path.images + '**/*')
+    .pipe(imageMin())
+    .pipe(gulp.dest(base.dist + path.images))
+})
+
 
 ///////////////////////////////////////
 //== Run Those Tasks (IF YOU DARE) ==//
@@ -97,6 +113,7 @@ gulp.task('default', ['clean'], function() {
   gulp.run('markup');
   gulp.run('styles');
   gulp.run('scripts');
+  gulp.run('images');
   gulp.run('watch');
 })
 
@@ -104,5 +121,6 @@ gulp.task('default', ['clean'], function() {
 gulp.task('watch', ['default', 'browser-sync'], function() {
   gulp.watch(base.src + path.js + '**/*.js', ['scripts']).on('change', reload);
   gulp.watch(base.src + path.styles + '**/*.scss', ['styles']).on('change', reload);
+  gulp.watch(base.src + path.data + '**/*.json', ['markup']).on('change', reload);
   gulp.watch(base.src + path.markup + '**/*.pug', ['markup']).on('change', reload);
 })

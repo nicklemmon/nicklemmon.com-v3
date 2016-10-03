@@ -1,0 +1,35 @@
+//== Typography ==//
+
+//== Base
+html {
+  font-size: 62.5%; // see https://snook.ca/archives/html_and_css/font-size-with-rem
+  font-family: $fontStack--primary;
+}
+
+//== Headings
+// Defined using http://modularscale.com 1.778 ratio
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 2.812rem;
+}
+
+h3 {
+  font-size: 1.582rem;
+}
+
+h4 {
+  font-size: 0.89rem;
+}
+
+hr {
+  max-width: 15px;
+  margin: $spacing--md 0;
+}
+
+p {
+  font-size: 1.7rem;
+  line-height: 1.6;
+}
