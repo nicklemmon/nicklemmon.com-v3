@@ -4,6 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
+  z-index: $layer--mid; // allows shadow to overlap section below
   padding: 0 $spacing--md;
   height: 3.75rem;
   background: $color--white;
