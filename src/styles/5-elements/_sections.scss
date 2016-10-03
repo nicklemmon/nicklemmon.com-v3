@@ -1,17 +1,44 @@
 //== Section Styles ==//
 
-
 .sect {
-
+  width: 100%;
+  //transform: rotate(-$sectionRotation);
 }
 
   .sect__container {
     max-width: 844px;
     padding: $spacing--xl $spacing--md;
     margin: 0 auto;
+    //transform: rotate($sectionRotation);
   }
 
 .sect--alt {
   color: $color--white;
-  background: $color--primary;
+  background:
+    linear-gradient(
+      rgba($color--primary, 0.9),
+      rgba($color--primary, 0.9)
+    ),
+    url('/images/nc-mountains--xl.png');
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+
+  @media screen and (min-width: $breakpoint--sm) {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+}
+
+.sect--hero {
+  display: flex;
+  align-items: center;
+  min-height: 40rem;
+
+  @media screen and (min-width: $breakpoint--sm) {
+    text-align: center;
+    min-height: 60rem;
+  }
+}
+
+.sect--hero__tagline {
+  text-shadow: 0 0.2rem 3px rgba($color--primaryDark, 0.5);
 }
