@@ -14,6 +14,7 @@ var globSass = require('gulp-sass-glob');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
 var concatJS = require('gulp-concat');
+var imageMin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
@@ -32,7 +33,8 @@ var path = {
   styles: 'styles/',
   markup: 'markup/',
   js: 'js/',
-  data: 'data/'
+  data: 'data/',
+  images: 'images/'
 }
 
 // Get some data
@@ -93,6 +95,13 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest(base.dist + path.js))
 })
 
+// Minify images
+gulp.task('images', function() {
+  return gulp.src(base.src + path.images + '**/*')
+    .pipe(imageMin())
+    .pipe(gulp.dest(base.dist + path.images))
+})
+
 
 ///////////////////////////////////////
 //== Run Those Tasks (IF YOU DARE) ==//
@@ -103,6 +112,7 @@ gulp.task('default', ['clean'], function() {
   gulp.run('markup');
   gulp.run('styles');
   gulp.run('scripts');
+  gulp.run('images');
   gulp.run('watch');
 })
 

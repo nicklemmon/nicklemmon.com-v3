@@ -1,8 +1,15 @@
 extends layouts/_default.pug
 
 block content
+
   section.sect.sect--alt
     div.sect__container.u-txtAlign--c
+
+      picture.sect__bg-img(aria-role="presentation") <!-- see http://alistapart.com/article/using-responsive-images-now -->
+        source(media="", srcset="")
+        source(media="", srcset="")
+        img(src="", alt="")
+
       h1.tagline.tagline--h1 Front-end Web Design
       h2.tagline.tagline--h2 in Durham, NC
 
