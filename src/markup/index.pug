@@ -2,15 +2,10 @@ extends layouts/_default.pug
 
 block content
 
-  section.sect.sect--alt
-    div.sect__container.u-txtAlign--c
+  section.sect.sect--alt.sect--hero
+    div.sect__container
 
-      picture.sect__bg-img(aria-role="presentation") <!-- see http://alistapart.com/article/using-responsive-images-now -->
-        source(media="", srcset="")
-        source(media="", srcset="")
-        img(src="", alt="")
-
-      h1.tagline.tagline--h1 Front-end Web Design
-      h2.tagline.tagline--h2 in Durham, NC
+      h1.tagline.sect--hero__tagline.tagline--h1 Front-end Web Design
+      h2.tagline.sect--hero__tagline.tagline--h2 in Durham, NC
 
       a.button.button--primary See My Stuff!
