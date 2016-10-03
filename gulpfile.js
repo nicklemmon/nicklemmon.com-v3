@@ -15,6 +15,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
 var concatJS = require('gulp-concat');
 var imageMin = require('gulp-imagemin');
+var webP = require('gulp-webp');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
