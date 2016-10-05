@@ -1,4 +1,4 @@
-//== Misc Trumps (or Clintons) ==//
+//== Overrides ==//
 
 // These are used as utility classes
 // or overrides. In each case, the class
@@ -6,14 +6,14 @@
 
 
 //== Typographic
-.u-txtAlign--l {
+.ov-txtAlign--l {
   text-align: left;
 }
 
-.u-txtAlign--c {
+.ov-txtAlign--c {
   text-align: center;
 }
 
-.u-txtAlign--r {
+.ov-txtAlign--r {
   text-align: right;
 }
