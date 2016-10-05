@@ -1,19 +1,73 @@
 //== Overrides ==//
 
-// These are used as utility classes
+// These are used as utility classes (hence the 'u-')
 // or overrides. In each case, the class
 // typically only offers one property.
 
 
 //== Typographic
-.ov-txtAlign--l {
+.u-txtAlign--l {
   text-align: left;
 }
 
-.ov-txtAlign--c {
+.u-txtAlign--c {
   text-align: center;
 }
 
-.ov-txtAlign--r {
+.u-txtAlign--r {
   text-align: right;
+}
+
+//== Spacing ==//
+$spacingMap: (
+  '--sm': $spacing--sm,
+  '--md': $spacing--md,
+  '--lg': $spacing--lg,
+  '--xl': $spacing--xl
+);
+
+//== Padding
+@each $size, $var in $spacingMap {
+  .u-pd#{$size} {
+    padding: $var;
+  }
+
+  .u-pdTop#{$size} {
+    padding-top: $var;
+  }
+
+  .u-pdRight#{$size} {
+    padding-right: $var;
+  }
+
+  .u-pdBottom#{$size} {
+    padding-bottom: $var;
+  }
+
+  .u-pdLeft#{$size} {
+    padding-left: $var;
+  }
+}
+
+//== Margin
+@each $size, $var in $spacingMap {
+  .u-mg#{$size} {
+    margin: $var;
+  }
+
+  .u-mgTop#{$size} {
+    margin-top: $var;
+  }
+
+  .u-mgRight#{$size} {
+    margin-right: $var;
+  }
+
+  .u-mgBottom#{$size} {
+    margin-bottom: $var;
+  }
+
+  .u-mgLeft#{$size} {
+    margin-left: $var;
+  }
 }
