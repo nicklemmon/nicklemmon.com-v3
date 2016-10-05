@@ -1,9 +1,13 @@
 //== Grid - using Jeet! http://jeet.gs ==//
-.gr {
-  @include center(844px, $spacing--md);
-}
-//== Columns
+// Imported from the /vendor dir,
+// settings can be found in there
 
+.gr {
+  @include center(844px);
+  padding: $spacing--md;
+}
+
+//== Columns
 $list-o-columns: (
   "1-4", "1-3", "1-2", "2-3", "3-4"
 );
@@ -39,6 +43,7 @@ $list-o-columns: (
     .gr__col--#{$val} {
       @media screen and (max-width: $breakpoint--lg) {
         @include col(1);
+        padding-bottom: $spacing--lg;
       }
     }
   }
@@ -50,6 +55,7 @@ $list-o-columns: (
     .gr__col--#{$val} {
       @media screen and (max-width: $breakpoint--md) {
         @include col(1);
+        padding-bottom: $spacing--lg;
       }
     }
   }
@@ -61,6 +67,7 @@ $list-o-columns: (
     .gr__col--#{$val} {
       @media screen and (max-width: $breakpoint--sm) {
         @include col(1);
+        padding-bottom: $spacing--lg;
       }
     }
   }
@@ -72,6 +79,7 @@ $list-o-columns: (
     .gr__col--#{$val} {
       @media screen and (max-width: $breakpoint--xs) {
         @include col(1);
+        padding-bottom: $spacing--lg;
       }
     }
   }
