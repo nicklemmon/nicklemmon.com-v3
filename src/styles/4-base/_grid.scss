@@ -4,7 +4,7 @@
 
 .gr {
   @include center(844px);
-  padding: $spacing--md;
+  padding-bottom: $spacing--lg;
 }
 
 //== Columns
@@ -38,22 +38,26 @@ $list-o-columns: (
 // make the breakpoints happen.
 
 // Collapses to 100% below large breakpoint
-.gr--lg {
-  @each $val in $list-o-columns {
-    .gr__col--#{$val} {
-      @media screen and (max-width: $breakpoint--lg) {
+@media screen and (max-width: $breakpoint--lg) {
+  .gr--lg {
+    padding-bottom: 0; // disables default padding on the row...
+
+    @each $val in $list-o-columns {
+      .gr__col--#{$val} {
         @include col(1);
-        padding-bottom: $spacing--lg;
+        padding-bottom: $spacing--lg; // ...and puts it on the column
       }
     }
   }
 }
 
 // Collapses to 100% below medium breakpoint
-.gr--md {
-  @each $val in $list-o-columns {
-    .gr__col--#{$val} {
-      @media screen and (max-width: $breakpoint--md) {
+@media screen and (max-width: $breakpoint--md) {
+  .gr--md {
+    padding-bottom: 0;
+
+    @each $val in $list-o-columns {
+      .gr__col--#{$val} {
         @include col(1);
         padding-bottom: $spacing--lg;
       }
@@ -62,10 +66,12 @@ $list-o-columns: (
 }
 
 // Collapses to 100% below small breakpoint
-.gr--sm {
-  @each $val in $list-o-columns {
-    .gr__col--#{$val} {
-      @media screen and (max-width: $breakpoint--sm) {
+@media screen and (max-width: $breakpoint--sm) {
+  .gr--sm {
+    padding-bottom: 0;
+
+    @each $val in $list-o-columns {
+      .gr__col--#{$val} {
         @include col(1);
         padding-bottom: $spacing--lg;
       }
@@ -74,10 +80,12 @@ $list-o-columns: (
 }
 
 // Collapses to 100% below x-small breakpoint
-.gr--xs {
-  @each $val in $list-o-columns {
-    .gr__col--#{$val} {
-      @media screen and (max-width: $breakpoint--xs) {
+@media screen and (max-width: $breakpoint--xs) {
+  .gr--xs {
+    padding-bottom: 0;
+
+    @each $val in $list-o-columns {
+      .gr__col--#{$val} {
         @include col(1);
         padding-bottom: $spacing--lg;
       }
