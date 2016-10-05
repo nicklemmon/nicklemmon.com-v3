@@ -2,14 +2,12 @@
 
 .sect {
   width: 100%;
-  //transform: rotate(-$sectionRotation);
 }
 
   .sect__container {
     max-width: 844px;
     padding: $spacing--xl $spacing--md;
     margin: 0 auto;
-    //transform: rotate($sectionRotation);
   }
 
 .sect--alt {
@@ -24,7 +22,7 @@
   clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
 
   @media screen and (min-width: $breakpoint--sm) {
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
   }
 }
 
@@ -46,7 +44,7 @@
 }
 
 .sect--hero__tagline.tagline--h2 {
-  
+
   @media screen and (min-width: $breakpoint--sm) {
     display: flex;
     align-items: center;

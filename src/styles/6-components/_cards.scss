@@ -1,1 +1,17 @@
 //== Cards ==//
+
+.card {
+  display: block;
+  position: relative;
+  z-index: $layer--mid;
+  height: 14rem;
+  padding: $spacing--md;
+  border-radius: $borderRadius;
+  background: $color--white;
+  box-shadow: 0 0.4rem 5px rgba(#000, 0.1);
+  cursor: pointer;
+}
+
+.card--border {
+  border: 1px solid rgba($color--base, 0.33);
+}

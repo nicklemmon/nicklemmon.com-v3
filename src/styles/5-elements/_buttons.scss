@@ -7,7 +7,7 @@
   font-size: 1.625rem;
   font-family: $fontStack--secondary;
   letter-spacing: 0.1rem;
-  border-radius: 9px;
+  border-radius: $borderRadius;
   cursor: pointer;
 
   &:after { // box-shadow
