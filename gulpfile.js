@@ -100,6 +100,7 @@ gulp.task('scripts', function() {
 // Minify images
 gulp.task('images', function() {
   return gulp.src(base.src + path.images + '**/*')
+    .pipe(webP())
     .pipe(imageMin())
     .pipe(gulp.dest(base.dist + path.images))
 })
