@@ -57,7 +57,8 @@ gulp.task('clean', function() {
 // BrowerSync stuff for a local server and cross-browser refreshing
 gulp.task('browser-sync', function() {
     browserSync({
-        server: "./_dist"
+        server: "./_dist",
+        port: 1986
     })
 })
 
