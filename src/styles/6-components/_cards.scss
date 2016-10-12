@@ -1,14 +1,13 @@
 //== Cards ==//
 
 .card {
+  @include pseudoShadow();
   display: block;
-  position: relative;
-  z-index: $layer--mid;
   height: 14rem;
   padding: $spacing--md;
   border-radius: $borderRadius;
   background: $color--white;
-  box-shadow: 0 0.4rem 5px rgba(#000, 0.1);
+  box-shadow: 0 0.3rem 5px -0.3rem rgba(#000, 0.5);
   cursor: pointer;
 }
 

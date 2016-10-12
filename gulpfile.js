@@ -57,7 +57,8 @@ gulp.task('clean', function() {
 // BrowerSync stuff for a local server and cross-browser refreshing
 gulp.task('browser-sync', function() {
     browserSync({
-        server: "./_dist"
+        server: "./_dist",
+        port: 1986
     })
 })
 
@@ -99,6 +100,7 @@ gulp.task('scripts', function() {
 // Minify images
 gulp.task('images', function() {
   return gulp.src(base.src + path.images + '**/*')
+    .pipe(webP())
     .pipe(imageMin())
     .pipe(gulp.dest(base.dist + path.images))
 })
