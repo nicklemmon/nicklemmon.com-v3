@@ -1,26 +1,14 @@
 //== Buttons ==//
 
 .button {
+  @include pseudoShadow();
   display: inline-block;
-  position: relative;
   padding: 1rem 2.25rem;
   font-size: 1.625rem;
   font-family: $fontStack--secondary;
   letter-spacing: 0.1rem;
   border-radius: $borderRadius;
   cursor: pointer;
-
-  &:after { // box-shadow
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    left: 25%;
-    height: 2rem;
-    width: 50%;
-    box-shadow: 0 0.3rem 10px -0.2rem rgba(#000, 0.3);
-  }
 }
 
   .button--primary {
