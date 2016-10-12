@@ -1,24 +1,5 @@
-//== Overrides ==//
+//== Spacing Overrides ==//
 
-// These are used as utility classes (hence the 'u-')
-// or overrides. In each case, the class
-// typically only offers one property.
-
-
-//== Typographic
-.u-txtAlign--l {
-  text-align: left;
-}
-
-.u-txtAlign--c {
-  text-align: center;
-}
-
-.u-txtAlign--r {
-  text-align: right;
-}
-
-//== Spacing ==//
 $spacingMap: (
   '--sm': $spacing--sm,
   '--md': $spacing--md,

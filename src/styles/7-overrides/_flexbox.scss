@@ -1,0 +1,44 @@
+//== Flexbox Overrides ==//
+
+//== Display Properties
+.u-flex {
+  display: flex;
+}
+
+.u-inlineFlex {
+  display: inline-flex;
+}
+
+//== Aligning and Justifying
+.u-alignItems--start {
+  align-items: flex-start;
+}
+
+.u-alignItems--end {
+  align-items: flex-end;
+}
+
+.u-alignItems--center {
+  align-items: center;
+}
+
+.u-jstContent--start {
+  justify-content: flex-start;
+}
+
+.u-jstContent--end {
+  justify-content: flex-end;
+}
+
+.u-jstContent--center {
+  justify-content: center;
+}
+
+//== Direction
+.u-flexDir--row {
+  flex-direction: row;
+}
+
+.u-flexDir--col {
+  flex-direction: column;
+}
