@@ -17,25 +17,34 @@
       rgba($color--primary, 0.9),
       rgba($color--primary, 0.9)
     ),
-    url('/images/nc-mountains--xl.png');
+    url('/images/nc-mountains.webp');
   background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  position: relative;
+  z-index: $layer--low;
+}
+
+.sect--angle {
+  clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+  min-height: 40rem;
+  display: flex;
+  align-items: center;
 
   @media screen and (min-width: $breakpoint--sm) {
-    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+    clip-path: polygon(0 12%, 100% 0, 100% 88%, 0 100%);
+    min-height: 60rem;
   }
 }
 
 
 //== Hero-specific styles
 .sect--hero {
-  display: flex;
-  align-items: center;
-  min-height: 40rem;
+  margin-top: -$spacing--xl;
+  padding-top: $spacing--xl;
 
   @media screen and (min-width: $breakpoint--sm) {
     text-align: center;
-    min-height: 60rem;
+    margin-top: -$spacing--lg * 3;
+    padding-top: $spacing--xl;
   }
 }
 
@@ -44,7 +53,6 @@
 }
 
 .sect--hero__tagline.tagline--h2 {
-
   @media screen and (min-width: $breakpoint--sm) {
     display: flex;
     align-items: center;
