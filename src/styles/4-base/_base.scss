@@ -1,4 +1,6 @@
 //== Base Styles, Containers, etc. ==//
 
 .content {
+  position: relative;
+  z-index: $layer--low;
 }
