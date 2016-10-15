@@ -1,0 +1,8 @@
+//== Type Elements ==//
+
+.paragraph--paddingCol {
+
+  @media screen and (min-width: $breakpoint--xs) {
+    padding-top: $spacing--lg * 2;
+  }
+}
