@@ -1,4 +1,8 @@
 footer.footer
-  a.footer__socialLink(href="http://github.io/nicklemmon")
-  a.footer__socialLink(href="http://codepen.io/nicklemmon")
-  a.footer__socialLink(href="http://twitter.com/nicklemmon")
+  //- uses inline SVG, included via .pug partials
+  a.footer__btn(href="http://github.io/nicklemmon")
+    include ../partials/svg/_github.pug
+  a.footer__btn(href="http://codepen.io/nicklemmon")
+    include ../partials/svg/_codepen.pug
+  a.footer__btn(href="http://twitter.com/nicklemmon")
+    include ../partials/svg/_twitter.pug
