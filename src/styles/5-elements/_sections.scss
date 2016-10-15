@@ -6,7 +6,7 @@
 
 .sect__container {
   max-width: $breakpoint--md;
-  padding: $spacing--xl $spacing--md;
+  padding: $spacing--xl * 2 $spacing--md;
   margin: 0 auto;
 }
 
