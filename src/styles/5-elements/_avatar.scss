@@ -1,1 +1,24 @@
 //== Avatar ==//
+
+.avatar {
+  width: auto;
+  border-radius: 50%;
+  border: 2px solid $color--white;
+
+  @media screen and (min-width: $breakpoint--xs) {
+    float: right;
+    margin-right: $spacing--lg;
+  }
+}
+
+.avatar__img {
+  border-radius: 50%;
+  width: 16rem;
+  height: 16rem;
+  box-shadow: 0 0.3rem 13px -0.1rem rgba(#000, 0.25);
+
+  @media screen and (min-width: $breakpoint--xs) {
+    width: 13.5rem;
+    height: 13.5rem;
+  }
+}

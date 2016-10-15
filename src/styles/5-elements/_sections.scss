@@ -6,7 +6,7 @@
 
 .sect__container {
   max-width: $breakpoint--md;
-  padding: $spacing--xl $spacing--md;
+  padding: $spacing--xl * 2 $spacing--md;
   margin: 0 auto;
 }
 
@@ -31,7 +31,7 @@
 
   @media screen and (min-width: $breakpoint--sm) {
     min-height: 65rem;
-    margin-top: -$spacing--lg * 4;
+    margin-top: -$spacing--lg * 5;
   }
 
   .sect__container { // containers within angled sections have more vertical padding
