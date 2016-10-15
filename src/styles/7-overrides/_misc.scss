@@ -11,3 +11,8 @@
 .u-invisible {
   visibility: hidden;
 }
+
+.u-txtHide { // accessible technique from http://webaim.org/techniques/css/invisiblecontent/#techniques - should allow screen reader to still view
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+}
