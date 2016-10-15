@@ -1,7 +1,31 @@
 //== Footer ==//
 
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 6rem;
   background: $color--base;
   color: $color--white;
+}
+
+.footer__container {
+  height: 100%;
+  width: 100%;
+  max-width: $breakpoint--md;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer__btn {
+  display: block;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  transition: background $transitionDur $transitionEasing;
+
+  &:hover {
+    background: $color--baseLight;
+  }
 }
