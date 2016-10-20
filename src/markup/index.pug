@@ -9,6 +9,7 @@ block content
         h2.tagline.tagline--h2.hero__tagline in Durham, NC
       a.button.button--primary See My Stuff!
 
+  //- Portfolio section
   section.sect
     .sect__container.u-pdBottom--xl
       .gr
@@ -44,6 +45,7 @@ block content
         .gr__col--1-4
           a.card.card--border
 
+  //- 'My Skillset' section
   section.sect.sect--alt.sect--angle.u-pdTop--xl
     .sect__container
       .gr
@@ -54,22 +56,30 @@ block content
 
       .gr.gr--xs
         .gr__col--1-4
-          a.card
+          a.card.card--flexCenter
+            include partials/svg/_html5.pug
         .gr__col--1-4
-          a.card
+          a.card.card--flexCenter
+            include partials/svg/_sass.pug
         .gr__col--1-4
-          a.card
+          a.card.card--flexCenter
+            include partials/svg/_js.pug
         .gr__col--1-4
-          a.card
+          a.card.card--flexCenter
+            include partials/svg/_adobe-cc.pug
 
       .gr.gr--xs.u-flex.u-jstContent--center
         .gr__col--1-4
-          a.card
+          a.card.card--flexCenter
+            include partials/svg/_sketch.pug
         .gr__col--1-4
-          a.card
+          a.card.card--flexCenter
+            include partials/svg/_terminal.pug
         .gr__col--1-4
-          a.card
+          a.card.card--flexCenter
+            include partials/svg/_handlebars.pug
 
+  //- 'About Me' sections
   section.sect
     .sect__container
       .gr.gr--xs
