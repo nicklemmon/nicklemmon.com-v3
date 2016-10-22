@@ -4,3 +4,9 @@
   position: relative;
   z-index: $layer--low;
 }
+
+img,
+source {
+  max-width: 100%;
+  height: auto;
+}
