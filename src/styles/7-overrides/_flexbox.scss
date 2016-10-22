@@ -2,43 +2,43 @@
 
 //== Display Properties
 .u-flex {
-  display: flex;
+  display: flex !important;
 }
 
 .u-inlineFlex {
-  display: inline-flex;
+  display: inline-flex !important;
 }
 
 //== Aligning and Justifying
 .u-alignItems--start {
-  align-items: flex-start;
+  align-items: flex-start !important;
 }
 
 .u-alignItems--end {
-  align-items: flex-end;
+  align-items: flex-end !important;
 }
 
 .u-alignItems--center {
-  align-items: center;
+  align-items: center !important;
 }
 
 .u-jstContent--start {
-  justify-content: flex-start;
+  justify-content: flex-start !important;
 }
 
 .u-jstContent--end {
-  justify-content: flex-end;
+  justify-content: flex-end !important;
 }
 
 .u-jstContent--center {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 //== Direction
 .u-flexDir--row {
-  flex-direction: row;
+  flex-direction: row !important;
 }
 
 .u-flexDir--col {
-  flex-direction: column;
+  flex-direction: column !important;
 }

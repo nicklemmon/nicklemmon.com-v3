@@ -11,70 +11,70 @@ $spacingMap: (
 //== Padding
 @each $size, $var in $spacingMap {
   .u-pd#{$size} {
-    padding: $var;
+    padding: $var !important;
   }
 
   .u-pdX#{$size} {
-    padding-left: $var;
-    padding-right: $var;
+    padding-left: $var !important;
+    padding-right: $var !important;
   }
 
   .u-pdY#{$size} {
-    padding-top: $var;
-    padding-bottom: $var;
+    padding-top: $var !important;
+    padding-bottom: $var !important;
   }
 
   .u-pdTop#{$size} {
-    padding-top: $var;
+    padding-top: $var !important;
   }
 
   .u-pdRight#{$size} {
-    padding-right: $var;
+    padding-right: $var !important;
   }
 
   .u-pdBottom#{$size} {
-    padding-bottom: $var;
+    padding-bottom: $var !important;
   }
 
   .u-pdLeft#{$size} {
-    padding-left: $var;
+    padding-left: $var !important;
   }
 }
 
 //== Margin
 .u-mgX--auto {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 @each $size, $var in $spacingMap {
   .u-mg#{$size} {
-    margin: $var;
+    margin: $var !important;
   }
 
   .u-mgX#{$size} {
-    margin-left: $var;
-    margin-right: $var;
+    margin-left: $var !important;
+    margin-right: $var !important;
   }
 
   .u-mgY#{$size} {
-    margin-top: $var;
-    margin-bottom: $var;
+    margin-top: $var !important;
+    margin-bottom: $var !important;
   }
 
   .u-mgTop#{$size} {
-    margin-top: $var;
+    margin-top: $var !important;
   }
 
   .u-mgRight#{$size} {
-    margin-right: $var;
+    margin-right: $var !important;
   }
 
   .u-mgBottom#{$size} {
-    margin-bottom: $var;
+    margin-bottom: $var !important;
   }
 
   .u-mgLeft#{$size} {
-    margin-left: $var;
+    margin-left: $var !important;
   }
 }
