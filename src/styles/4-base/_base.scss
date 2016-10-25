@@ -1,5 +1,9 @@
 //== Base Styles, Containers, etc. ==//
 
+* {
+  box-sizing: border-box;
+}
+
 .content {
   position: relative;
   z-index: $layer--low;
