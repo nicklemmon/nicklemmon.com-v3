@@ -1,1 +1,25 @@
 //== Animations ==//
+
+@keyframes bounceOut {
+  0% {
+    transform: scaleX(1) scaleY(1);
+  }
+
+  70% {
+    transform: scaleX(1.07) scaleY(1.03);
+  }
+
+  100% {
+    transform: scaleX(1.03) scaleY(1.03);
+  }
+}
+
+@keyframes bounceOutReturn {
+  0% {
+    transform: scaleX(1.03) scaleY(1.03);
+  }
+
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}

@@ -13,6 +13,15 @@
   overflow: hidden;
 }
 
+.card--btn {
+  animation: bounceOutReturn $transitionDur $transitionEasing forwards;
+
+  &:hover,
+  &:focus {
+    animation: bounceOut $transitionDur $transitionEasing forwards;
+  }
+}
+
 .card--squared {
   border-radius: 0;
 }
