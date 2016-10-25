@@ -32,6 +32,16 @@ $list-o-columns: (
   @include col(3/4);
 }
 
+//== Placeholder column
+// Used to create an empty column,
+// filling it with a <br> but hiding it
+// at the appropriate breakpoint
+@mixin hidePlaceholder {
+  content: '';
+  display: none;
+  padding-bottom: 0;
+}
+
 //== Columns w/ breakpoints
 // At the row level, use
 // the following classes to
@@ -41,6 +51,10 @@ $list-o-columns: (
 @media screen and (max-width: $breakpoint--lg) {
   .gr--lg {
     padding-bottom: 0; // disables default padding on the row...
+
+    .gr__col--placeholder {
+      @include hidePlaceholder();
+    }
 
     @each $val in $list-o-columns {
       .gr__col--#{$val} {
@@ -56,6 +70,10 @@ $list-o-columns: (
   .gr--md {
     padding-bottom: 0;
 
+    .gr__col--placeholder {
+      @include hidePlaceholder();
+    }
+
     @each $val in $list-o-columns {
       .gr__col--#{$val} {
         @include col(1);
@@ -70,6 +88,10 @@ $list-o-columns: (
   .gr--sm {
     padding-bottom: 0;
 
+    .gr__col--placeholder {
+      @include hidePlaceholder();
+    }
+
     @each $val in $list-o-columns {
       .gr__col--#{$val} {
         @include col(1);
@@ -83,6 +105,10 @@ $list-o-columns: (
 @media screen and (max-width: $breakpoint--xs) {
   .gr--xs {
     padding-bottom: 0;
+
+    .gr__col--placeholder {
+      @include hidePlaceholder();
+    }
 
     @each $val in $list-o-columns {
       .gr__col--#{$val} {

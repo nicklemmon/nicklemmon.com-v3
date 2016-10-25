@@ -98,12 +98,21 @@ gulp.task('scripts', function() {
 })
 
 // Minify images
-gulp.task('images', function() {
+gulp.task('imageMin', function() {
   return gulp.src(base.src + path.images + '**/*')
-    .pipe(webP())
     .pipe(imageMin())
     .pipe(gulp.dest(base.dist + path.images))
 })
+
+// Make them delicious webPs
+gulp.task('webP', function() {
+  return gulp.src(base.src + path.images + '**/*')
+    .pipe(webP())
+    .pipe(gulp.dest(base.dist + path.images))
+})
+
+// Run both the minify and webP task, asynchronously
+gulp.task('images', ['imageMin', 'webP'])
 
 
 ///////////////////////////////////////

@@ -9,5 +9,23 @@
 
 //== Showing and Hiding
 .u-invisible {
-  visibility: hidden;
+  visibility: hidden !important;
+}
+
+.u-txtHide { // accessible technique from http://webaim.org/techniques/css/invisiblecontent/#techniques - should allow screen reader to still view
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+}
+
+//== Floatin'
+.u-float--none {
+  float: none !important;
+}
+
+.u-float--left {
+  float: left !important;
+}
+
+.u-float--right {
+  float: right !important;
 }

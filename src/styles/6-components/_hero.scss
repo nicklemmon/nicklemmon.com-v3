@@ -2,12 +2,10 @@
 
 .hero {
   margin-top: -$spacing--xl;
-  padding-top: $spacing--xl;
 
   @media screen and (min-width: $breakpoint--sm) {
     display: flex;
     align-items: center;
-    padding-top: $spacing--xl;
     text-align: center;
   }
 }

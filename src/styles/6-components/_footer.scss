@@ -1,1 +1,42 @@
 //== Footer ==//
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  height: 6rem;
+  background: $color--base;
+  color: $color--white;
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: $spacing--sm $spacing--md;
+  cursor: pointer;
+  transition: background $transitionDur $transitionEasing;
+
+  &:hover {
+    background: $color--baseLight;
+  }
+}
+
+.footer__svgIcon {
+  width: 100%;
+  height: 100%;
+
+  &--github {
+    max-height: 65%;
+  }
+
+  &--codepen {
+    max-height: 75%;
+  }
+
+  &--twitter {
+    max-height: 55%;
+  }
+}
