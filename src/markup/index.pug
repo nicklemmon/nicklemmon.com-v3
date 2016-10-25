@@ -7,7 +7,7 @@ block content
       h1.tagline.tagline--h1.hero__tagline.u-mgTop--lg Front-end Web Design
       .hero__taglineContainer
         h2.tagline.tagline--h2.hero__tagline in Durham, NC
-      a.button.button--primary See My Stuff!
+      a.button.button--primary(tabindex="0") See My Stuff!
 
   //- Portfolio section
   section.sect
@@ -21,38 +21,38 @@ block content
       //- grid of portfolio items
       .gr.gr--xs
         .gr__col--1-4
-          a.card.u-pd--0
+          a.card.card--btn.u-pd--0(tabindex="0")
             picture.card__img
               source(srcset="/images/portfolio/thumb-01.png", media="(min-width: 200px)")
               img(src="/images/portfolio/thumb-01.png", alt="")
         .gr__col--1-4
-          a.card.u-pd--0
+          a.card.card--btn.u-pd--0(tabindex="0")
             img.card__img(src="/images/portfolio/thumb-02.webp", alt="")
         .gr__col--1-2
-          a.card.u-pd--0
+          a.card.card--btn.u-pd--0(tabindex="0")
             img.card__img(src="/images/portfolio/thumb-03.webp", alt="")
 
       .gr.gr--xs
         .gr__col--1-4.gr__col--placeholder
           br
         .gr__col--1-4
-          a.card.u-pd--0
+          a.card.card--btn.u-pd--0(tabindex="0")
             img.card__img(src="/images/portfolio/thumb-04.webp", alt="")
         .gr__col--1-4.gr__col--placeholder
           br
         .gr__col--1-4
-          a.card.u-pd--0
+          a.card.card--btn.u-pd--0(tabindex="0")
             img.card__img(src="/images/portfolio/thumb-05.webp", alt="")
       .gr.gr--xs
 
         .gr__col--1-4
-          a.card.u-pd--0
+          a.card.card--btn.u-pd--0(tabindex="0")
             img.card__img(src="/images/portfolio/thumb-06.webp", alt="")
         .gr__col--1-2
-          a.card.u-pd--0
+          a.card.card--btn.u-pd--0(tabindex="0")
             img.card__img(src="/images/portfolio/thumb-07.webp", alt="")
         .gr__col--1-4
-          a.card.u-pd--0
+          a.card.card--btn.u-pd--0(tabindex="0")
             img.card__img(src="/images/portfolio/thumb-08.webp", alt="")
 
   //- 'My Skillset' section
@@ -66,27 +66,27 @@ block content
 
       .gr.gr--xs
         .gr__col--1-4
-          a.card.card--flexCenter
+          a.card.card--flexCenter(tabindex="0")
             include partials/svg/_html5.pug
         .gr__col--1-4
-          a.card.card--flexCenter
+          a.card.card--flexCenter(tabindex="0")
             include partials/svg/_sass.pug
         .gr__col--1-4
-          a.card.card--flexCenter
+          a.card.card--flexCenter(tabindex="0")
             include partials/svg/_js.pug
         .gr__col--1-4
-          a.card.card--flexCenter
+          a.card.card--flexCenter(tabindex="0")
             include partials/svg/_adobe-cc.pug
 
       .gr.gr--xs.u-flex.u-jstContent--center
         .gr__col--1-4
-          a.card.card--flexCenter
+          a.card.card--flexCenter(tabindex="0")
             include partials/svg/_sketch.pug
         .gr__col--1-4
-          a.card.card--flexCenter
+          a.card.card--flexCenter(tabindex="0")
             include partials/svg/_terminal.pug
         .gr__col--1-4
-          a.card.card--flexCenter
+          a.card.card--flexCenter(tabindex="0")
             include partials/svg/_handlebars.pug
 
   //- 'About Me' sections
