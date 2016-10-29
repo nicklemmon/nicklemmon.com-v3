@@ -7,7 +7,7 @@ block content
       h1.tagline.tagline--h1.hero__tagline.u-mgTop--lg Front-end Web Design
       .hero__taglineContainer
         h2.tagline.tagline--h2.hero__tagline in Durham, NC
-      a.button.button--primary(tabindex="0") See My Stuff!
+      a.btn.btn--primary(tabindex="0") See My Stuff!
 
   //- Portfolio section
   section.sect
@@ -96,12 +96,8 @@ block content
 
           form.form
             label.form__label.u-txtHide(for="email-address") Email address
-
-            .gr
-              .gr__col--3-4
-                input.form__input.u-displayInlineBlock(id="email-address", name="email-address", type="email", placeholder="Get in touch")
-              .gr__col--1-4
-                button.form__submit
-                  span.u-txtHide Send
+            input.form__input.u-displayInlineBlock(id="email-address", name="email-address", type="email", placeholder="Get in touch")
+            button.form__submit.btn.btn--secondary
+              span.u-txtHide Send
 
   .modal__overlay.is-hidden

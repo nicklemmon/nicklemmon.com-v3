@@ -1,6 +1,6 @@
 //== Buttons ==//
 
-.button {
+.btn {
   @include pseudoShadow();
   display: inline-block;
   padding: 1rem 2.25rem;
@@ -11,7 +11,7 @@
   cursor: pointer;
 }
 
-  .button--primary {
+  .btn--primary {
     color: $color--white;
     text-shadow: 0 0.1rem 5px rgba(#000, 0.1);
     border: 0.1rem solid $color--secondaryDark;
