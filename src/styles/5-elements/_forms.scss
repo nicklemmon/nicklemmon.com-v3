@@ -1,1 +1,13 @@
 //== Forms (and their Inputs!) ==//
+
+.form {
+
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  padding: $spacing--md;
+  border: 1px solid $color--base;
+  color: $color--gray;
+}
