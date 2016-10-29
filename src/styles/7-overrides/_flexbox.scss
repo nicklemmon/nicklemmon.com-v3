@@ -1,13 +1,8 @@
 //== Flexbox Overrides ==//
 
 //== Display Properties
-.u-flex {
-  display: flex !important;
-}
-
-.u-inlineFlex {
-  display: inline-flex !important;
-}
+// Take a look at the other display properties rather than here
+// Should be .u-display--flex and .u-display--inlineFlex
 
 //== Aligning and Justifying
 .u-alignItems--start {
