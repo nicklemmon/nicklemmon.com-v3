@@ -1,7 +1,11 @@
 //== Forms (and their Inputs!) ==//
 
 .form {
+  font-size: 1rem;
+}
 
+.form__label {
+  display: block;
 }
 
 .form__input {
@@ -10,4 +14,6 @@
   padding: $spacing--md;
   border: 1px solid $color--base;
   color: $color--gray;
+  font-size: 1.4em;
+  letter-spacing: 0.02em;
 }
