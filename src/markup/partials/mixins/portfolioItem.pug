@@ -1,0 +1,5 @@
+mixin portfolioItem(fileName, altText)
+  a.card.card--btn.js-modalOpen.u-pd--0(tabindex="0")
+    picture.card__img
+      source(srcset="/images/portfolio/" + fileName + ".webp", alt=altText)
+      img(src="/images/portfolio/" + fileName + ".png", alt=altText)
