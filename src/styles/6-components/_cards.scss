@@ -20,6 +20,10 @@
   &:focus {
     animation: bounceOut $transitionDur $transitionEasing forwards;
   }
+
+  &.is-active {
+    animation: press $transitionDur $transitionEasing forwards;
+  }
 }
 
 .card--squared {
