@@ -1,4 +1,4 @@
-TypePlayground.Global.Modal = {
+Portfolio.Global.Modal = {
   cacheDom: function() {
     this.$openTrigger = $('.js-modalOpen');
     this.$closeTrigger = $('.js-modalClose');
@@ -11,5 +11,6 @@ TypePlayground.Global.Modal = {
   },
   init: function() {
     this.cacheDom();
+    console.log('firing');
   }
 }
