@@ -89,15 +89,15 @@ block content
         .gr__col--1-3
           p.paragraph--paddingCol To see more work, find me elsewhere on the interwebs. You can always send me a message as well.
 
-      .gr.u-mgTop--xl
-        .card.card--squared.card--border.u-pd--xl
-          h4 Send a message
-          hr
+      .gr.card.card--squared.card--border.card--fluid.u-mgTop--xl.u-pdY--xl.u-pdX--lg
+        h4 Send a message
+        hr
+        p Send me your name and email address and I'll get back with you shortly.
 
-          form.form
-            label.form__label.u-txtHide(for="email-address") Email address
-            input.form__input.u-displayInlineBlock(id="email-address", name="email-address", type="email", placeholder="Get in touch")
-            button.form__submit.btn.btn--secondary
-              span.u-txtHide Send
+        form.form.u-mgTop--lg.u-display--flex
+          label.form__label.u-txtHide(for="email-address") Email address
+          input.form__input.form__input--horiz(id="email-address", name="email-address", type="email", placeholder="Get in touch")
+          button.form__inputBtn--horiz.btn.btn--secondary
+            span Send
 
   .modal__overlay.is-hidden

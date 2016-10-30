@@ -17,3 +17,16 @@
   font-size: 1.4em;
   letter-spacing: 0.02em;
 }
+
+
+//== Inputs with side-by-side buttons
+.form__input--horiz {
+
+}
+
+.form__inputBtn--horiz {
+  display: inline-block;
+  width: 20%;
+  border-radius: 0 $borderRadius $borderRadius 0;
+  border-left: 0;
+}

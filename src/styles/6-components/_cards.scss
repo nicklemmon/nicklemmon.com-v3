@@ -26,6 +26,10 @@
   }
 }
 
+.card--fluid {
+  height: auto; // when you just don't want to be limited by silly things like height
+}
+
 .card--squared {
   border-radius: 0;
 }
