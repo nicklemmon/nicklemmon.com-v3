@@ -10,6 +10,10 @@
   border-radius: $borderRadius;
   cursor: pointer;
   color: $color--white;
+
+  &:after { // slight adjustment required for pseudowShadow
+    height: 3px;
+  }
 }
 
 .btn--primary {
