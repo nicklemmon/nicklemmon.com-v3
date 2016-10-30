@@ -94,10 +94,21 @@ block content
         hr
         p Send me your name and email address and I'll get back with you shortly.
 
-        form.form.u-mgTop--lg.u-display--flex
-          label.form__label.u-txtHide(for="email-address") Email address
-          input.form__input.form__input--horiz(id="email-address", name="email-address", type="email", placeholder="Get in touch")
-          button.form__inputBtn--horiz.btn.btn--secondary
-            span Send
+        form.form.u-mgTop--lg
+          .gr.gr--xs
+            fieldset.gr__col--1-2
+              label.form__label.u-txtHide(for="first-name") First Name
+              input.form__input(id="first-name", name="first-name", type="text", placeholder="First Name")
+
+            fieldset.gr__col--1-2
+              label.form__label.u-txtHide(for="last-name") Last Name
+              input.form__input(id="last-name", name="last-name", type="text", placeholder="Last Name")
+
+          fieldset
+            label.form__label.u-txtHide(for="email-address") Email Address
+            input.form__input(id="email-address", name="email-address", type="email", placeholder="Email Address")
+
+          button.btn.btn--secondary.u-mgTop--lg(type="submit", method="post") Send
+
 
   .modal__overlay.is-hidden
