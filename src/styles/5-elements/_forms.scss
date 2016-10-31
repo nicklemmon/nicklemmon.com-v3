@@ -4,21 +4,59 @@
   font-size: 1rem;
 }
 
+.form__fieldset {
+  position: relative; // for absolute positioning within
+}
+
 .form__label {
   display: block;
-  font-size: 1.5em;
-  margin-bottom: $spacing--sm;
-  font-family: $fontStack--secondary;
+  position: absolute;
+  top: 0;
+  left: $spacing--md - $spacing--sm;
   font-weight: 700;
+  background: $color--white;
+  padding: $spacing--sm;
+}
+
+.form__label,
+.form__input::placeholder {
+  color: $color--primary;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: color $transitionDur $transitionEasing,
+              transform ($transitionDur * 1.25) $transitionEasing,
+              opacity $transitionDur $transitionEasing;
 }
 
 .form__input {
-  @include pseudoShadow();
   display: block;
   width: 100%;
   padding: $spacing--md;
-  border: 1px solid $color--base;
-  color: $color--gray;
-  font-size: 1.4em;
-  letter-spacing: 0.02em;
+  height: $spacing--xl;
+  border: 1px solid $color--primary;
+  font-size: 1.2em;
+  transition: border $transitionDur $transitionEasing,
+              outline $transitionDur $transitionEasing;
+
+  &:focus,
+  &:hover {
+    &::placeholder {
+      color: $color--gray;
+    }
+  }
+
+  &:focus {
+    outline: $color--base auto 1px; // used to override default Chrome behavior
+  }
+
+  // Used to determine whether float label is active
+  &:invalid + .form__label {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  &:valid + .form__label {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
 }
