@@ -1,1 +1,62 @@
 //== Forms (and their Inputs!) ==//
+
+.form {
+  font-size: 1rem;
+}
+
+.form__fieldset {
+  position: relative; // for absolute positioning within
+}
+
+.form__label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: $spacing--md - $spacing--sm;
+  font-weight: 700;
+  background: $color--white;
+  padding: $spacing--sm;
+}
+
+.form__label,
+.form__input::placeholder {
+  color: $color--primary;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: color $transitionDur $transitionEasing,
+              transform $transitionDur $transitionEasing,
+              opacity ($transitionDur / 2) $transitionEasing;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  padding: $spacing--md;
+  height: $spacing--xl;
+  border: 1px solid $color--primary;
+  font-size: 1.2em;
+  transition: border $transitionDur $transitionEasing,
+              outline $transitionDur $transitionEasing;
+
+  &:focus,
+  &:hover {
+    &::placeholder {
+      color: $color--gray;
+    }
+  }
+
+  &:focus {
+    outline: $color--base auto 1px; // used to override default Chrome behavior
+  }
+
+  // Used to determine whether float label is active
+  &:invalid + .form__label {
+    opacity: 0;
+    transform: translateY(-35%);
+  }
+
+  &:valid + .form__label {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}

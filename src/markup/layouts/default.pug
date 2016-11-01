@@ -1,0 +1,14 @@
+doctype html
+
+html(lang="en")
+  include ../partials/head.pug
+
+  body
+    include ../partials/nav.pug
+
+    main.content
+      block content
+
+    include ../partials/footer.pug
+
+    script(src="/js/scripts.min.js")

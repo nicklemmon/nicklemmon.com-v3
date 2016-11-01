@@ -88,9 +88,10 @@ gulp.task('styles', function() {
 // Concat and uglify the JavaScript
 gulp.task('scripts', function() {
   return gulp.src([
-    base.src + path.js + 'vendor/*.js',
-    base.src + path.js + 'base/*.js',
-    base.src + path.js + 'modules/*.js'
+    base.src + path.js + '1-vendor/*.js',
+    base.src + path.js + '2-base/*.js',
+    base.src + path.js + '3-modules/*.js',
+    base.src + path.js + '4-init/*.js'
   ])
     .pipe(concatJS('scripts.min.js'))
     .pipe(uglify())

@@ -1,19 +1,69 @@
 //== Buttons ==//
 
-.button {
-  @include pseudoShadow();
-  display: inline-block;
-  padding: 1rem 2.25rem;
-  font-size: 1.625rem;
+.btn {
+  @include pseudoShadow(); // defines position: relative;, fortunately!
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.5rem;
+  padding: 1rem $spacing--lg;
   font-family: $fontStack--secondary;
+  font-size: 1.75rem;
   letter-spacing: 0.1rem;
   border-radius: $borderRadius;
   cursor: pointer;
+  color: $color--white;
+  overflow: hidden;
+  transition: background $transitionDur $transitionEasing;
+
+  &:after { // slight adjustment required for pseudowShadow
+    height: 3px;
+  }
+
+  &:before { // hidden overlay that appears on focus/hover
+    @include size(100%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $layer--low;
+    display: block;
+    border-radius: $borderRadius;
+    transition: background ($transitionDur * 2) $transitionEasing;
+    background: rgba(0, 0, 0, 0);
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
-  .button--primary {
-    color: $color--white;
-    text-shadow: 0 0.1rem 5px rgba(#000, 0.1);
-    border: 0.1rem solid $color--secondaryDark;
-    background: linear-gradient(0deg, $color--secondaryDark, $color--secondary);
+.btn__txt {
+  position: relative;
+  z-index: $layer--mid;
+}
+
+.btn--primary {
+  text-shadow: 0 0.1rem 5px rgba(#000, 0.1);
+  border: 0.1rem solid $color--secondaryDark;
+  background: linear-gradient(0deg, $color--secondaryDark, $color--secondary);
+
+  &:hover,
+  &:focus {
+    &:before {
+      background: $color--secondaryDark;
+    }
   }
+}
+
+.btn--secondary {
+  border: 0.1rem solid $color--primaryDark;
+  background: linear-gradient(0deg, $color--primaryDark, $color--primary);
+
+  &:hover,
+  &:focus {
+    &:before {
+      background: $color--primaryDark;
+    }
+  }
+}

@@ -13,11 +13,11 @@ $breakpoint--md: 992px;
 $breakpoint--lg: 1200px;
 
 //== Z-Index Values / "Layers"
-$layer--bottom:   -1;
+$layer--bottom:   -5;
 $layer--low:      0;
-$layer--mid:      1;
-$layer--high:     2;
-$layer--top:      3;
+$layer--mid:      5;
+$layer--high:     10;
+$layer--top:      15;
 
 //== Animation Schtuff
 $transitionDur:     0.25s;
@@ -26,3 +26,4 @@ $transitionEasing:  ease-out;
 //== Misc
 $sectionRotation: 3deg;
 $borderRadius: 12px;
+$boxShadow: 0 0.6rem 7px -0.1rem rgba(#000, 0.1);
