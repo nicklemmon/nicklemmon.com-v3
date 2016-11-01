@@ -29,14 +29,14 @@
   height: 100%;
 
   &--github {
-    max-height: 65%;
-  }
-
-  &--codepen {
     max-height: 75%;
   }
 
+  &--codepen {
+    max-height: 85%;
+  }
+
   &--twitter {
-    max-height: 55%;
+    max-height: 65%;
   }
 }
