@@ -16,3 +16,8 @@
     box-shadow: $boxShadow;
   }
 }
+
+@mixin size($val) {
+  height: $val;
+  width: $val;
+}
