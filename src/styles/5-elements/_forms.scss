@@ -52,7 +52,7 @@
   // Used to determine whether float label is active
   &:invalid + .form__label {
     opacity: 0;
-    transform: translateY(0);
+    transform: translateY(-25%);
   }
 
   &:valid + .form__label {
