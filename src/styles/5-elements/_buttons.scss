@@ -29,19 +29,12 @@
     z-index: $layer--low;
     display: block;
     border-radius: $borderRadius;
-    opacity: 0;
-    transition: opacity ($transitionDur * 2) $transitionEasing;
+    transition: background ($transitionDur * 2) $transitionEasing;
+    background: rgba(0, 0, 0, 0);
   }
 
   &:focus {
     outline: none;
-  }
-
-  &:hover,
-  &:focus {
-    &:before {
-      opacity: 1;
-    }
   }
 }
 
