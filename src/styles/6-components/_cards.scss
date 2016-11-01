@@ -15,13 +15,7 @@
 
 .card--btn {
   overflow: hidden;
-  animation: bounceOutReturn $transitionDur $transitionEasing forwards;
-
-  &:hover,
-  &:focus {
-    animation: bounceOut $transitionDur $transitionEasing forwards;
-  }
-
+  
   &.is-active {
     animation: press $transitionDur $transitionEasing forwards;
   }
