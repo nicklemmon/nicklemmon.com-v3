@@ -6,8 +6,12 @@
 
 .sect__container {
   max-width: $breakpoint--md;
-  padding: $spacing--xl * 2 $spacing--md;
+  padding: ($spacing--xl * 2) 20px;
   margin: 0 auto;
+
+  @media screen and (min-width: $breakpoint--sm) {
+    padding: ($spacing--xl * 2) $spacing--md;
+  }
 }
 
 .sect--alt {
