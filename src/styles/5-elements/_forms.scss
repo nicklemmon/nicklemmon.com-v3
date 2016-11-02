@@ -25,7 +25,7 @@
   text-transform: uppercase;
   transition: color $transitionDur $transitionEasing,
               transform $transitionDur $transitionEasing,
-              opacity ($transitionDur / 2) $transitionEasing;
+              opacity $transitionDur $transitionEasing;
 }
 
 .form__input {
