@@ -17,10 +17,13 @@
   width: 100%;
   padding: $spacing--sm $spacing--md;
   cursor: pointer;
-  transition: background $transitionDur $transitionEasing;
+  border-bottom: 0 solid $color--secondary; // just need to make the transition work
+  transition: background $transitionDur $transitionEasing,
+              border-bottom $transitionDur $transitionEasing;
 
   &:hover {
     background: $color--baseLight;
+    border-bottom: ($spacing--sm / 2) solid $color--secondary;
   }
 }
 
