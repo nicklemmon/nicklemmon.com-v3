@@ -15,7 +15,7 @@
 
 .card--btn {
   overflow: hidden;
-  
+
   &.is-active {
     animation: press $transitionDur $transitionEasing forwards;
   }
