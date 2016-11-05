@@ -3,6 +3,6 @@
 .paragraph--paddingCol {
 
   @media screen and (min-width: $breakpoint--xs) {
-    padding-top: $spacing--lg * 2;
+    padding-top: 4.75rem; // kind of a hacky way to make this line up right...
   }
 }

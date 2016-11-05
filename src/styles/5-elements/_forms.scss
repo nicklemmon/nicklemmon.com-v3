@@ -13,6 +13,7 @@
   position: absolute;
   top: 0;
   left: $spacing--md - $spacing--sm;
+  font-size: 0.8rem;
   font-weight: 700;
   background: $color--white;
   padding: $spacing--sm;
@@ -21,6 +22,7 @@
 .form__label,
 .form__input::placeholder {
   color: $color--primary;
+  font-size: 0.8rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   transition: color $transitionDur $transitionEasing,
@@ -31,10 +33,10 @@
 .form__input {
   display: block;
   width: 100%;
-  padding: $spacing--md;
-  height: $spacing--xl;
+  padding: 2rem;
+  font-size: 1rem;
+  height: $spacing--sm * 2;
   border: 1px solid $color--primary;
-  font-size: 1.2em;
   transition: border $transitionDur $transitionEasing,
               outline $transitionDur $transitionEasing;
 

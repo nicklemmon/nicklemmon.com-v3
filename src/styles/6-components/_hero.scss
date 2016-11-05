@@ -2,33 +2,17 @@
 
 .hero {
   margin-top: -$spacing--xl;
+  padding: $spacing--xl $spacing--md;
 
   @media screen and (min-width: $breakpoint--sm) {
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: ($spacing--xl * 2) $spacing--md;
   }
 }
 
-.hero__tagline {
-  text-shadow: 0 0.2rem 3px rgba($color--primaryDark, 0.5);
-}
-
-.hero__tagline.tagline--h2 {
-  @media screen and (min-width: $breakpoint--sm) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:before,
-    &:after {
-      content: '';
-      margin: $spacing--sm;
-      display: block;
-      height: 1px;
-      width: 100%;
-      max-width: 60px;
-      background: $color--white;
-    }
-  }
+.hero__taglineContainer {
+  width: 100%;
 }
