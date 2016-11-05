@@ -19,7 +19,6 @@
 }
 
 .sect--angle {
-  clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
   position: relative;
   z-index: $layer--bottom;
   padding-bottom: $spacing--lg; // a little extra breathing room so the angle doesn't cut off the content
