@@ -1,7 +1,8 @@
 //== Colors ==//
 
 $color--base: #141B40;
-  $color--baseLight: scale-color($color--base, $lightness: 15%);
+  $color--baseLight: scale-color($color--base, $lightness: 20%);
+  $color--baseDark: scale-color($color--base, $lightness: -20%);
 $color--white: #FFF;
 $color--gray: #636363;
 $color--primary: #4B66E8;
