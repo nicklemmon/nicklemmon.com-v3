@@ -3,13 +3,18 @@
 .card {
   @include pseudoShadow();
   display: block;
-  height: 18rem;
+  height: 20rem;
   width: 100%;
   padding: $spacing--md;
   border-radius: $borderRadius;
   background: $color--white;
   position: relative;
   z-index: $layer--mid;
+
+  @media screen and (min-width: $breakpoint--xs) {
+    height: 20vw;
+    max-height: 200px;
+  }
 }
 
 .card--btn {
