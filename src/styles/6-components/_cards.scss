@@ -10,10 +10,10 @@
   background: $color--white;
   position: relative;
   z-index: $layer--mid;
-  cursor: pointer;
 }
 
 .card--btn {
+  cursor: pointer;
   overflow: hidden;
 
   &.is-active {
