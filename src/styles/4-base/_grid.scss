@@ -118,3 +118,12 @@ $list-o-columns: (
     }
   }
 }
+
+//== Narrow Grid Rows
+// Used for grid rows that do not span the full width of the page
+.gr--narrowXs {
+  @media screen and (min-width: $breakpoint--xs) {
+    display: flex;
+    justify-content: center;
+  }
+}
