@@ -70,3 +70,9 @@
     }
   }
 }
+
+.btn--small-full { // goes full width on smaller screen sizes
+  @media screen and (max-width: $breakpoint--xs) {
+    width: 100%;
+  }
+}
