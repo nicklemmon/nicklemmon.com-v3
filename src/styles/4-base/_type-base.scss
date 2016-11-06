@@ -4,27 +4,26 @@
 $baseline: $spacing--sm;
 
 // Screen min and max for font purposes //
-$screen--min: 20rem;
-$screen--max: 50rem;
+$screen--min: $breakpoint--xs;
+$screen--max: $breakpoint--lg;
 
 // Font size min and max //
-$fontSize--min: 0.8rem;
-$fontSize--max: 1.2rem;
+$fontSize--min: 0.9rem;
+$fontSize--max: 1.1rem;
 
 html {
-  font-size: calc(62.5% + 0.5vw); // dynamic font resizing based on rems
   color: $color--base;
   font-family: $fontStack--primary;
   @include fluid-type(font-size, $screen--min, $screen--max, $fontSize--min, $fontSize--max); // mixin from http://codepen.io/MadeByMike/pen/bEEGvv?editors%3D0100
 }
 
-// using http://modularscale.com using 1.2 ratio
+// using http://modularscale.com using 1.5 ratio
 $headings-map: (
-  h1: 2.488rem,
-  h2: 2.074rem,
-  h3: 1.728rem,
-  h4: 1.44rem,
-  h5: 1.2rem
+  h1: 2.856rem,
+  h2: 2.197rem,
+  h3: 1.69rem,
+  h4: 1.3rem,
+  h5: 1rem
 );
 
 // Headings //

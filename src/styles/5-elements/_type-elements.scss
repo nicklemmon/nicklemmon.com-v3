@@ -1,7 +1,11 @@
 //== Type Elements ==//
 
 .paragraph--paddingCol {
-  columns: 2;
+  columns: 1;
+
+  @media screen and (min-width: $breakpoint--sm) {
+    columns: 2;
+  }
 }
 
 //== Taglines
@@ -10,25 +14,17 @@
   text-shadow: 0 0.2rem 3px rgba($color--primaryDark, 0.5);
 }
 
-.tagline--h1 {
+.tagline--h1,
+.tagline--h2 {
   margin-bottom: $spacing--md;
-
-  @media screen and (min-width: $breakpoint--md) {
-    font-size: 5vw;
-  }
 }
 
 .tagline--h2.tagline--h2 { // workaround to increase specificity slightly
   font-weight: 200;
   font-family: $fontStack--primary;
-  margin-bottom: $spacing--lg;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @media screen and (min-width: $breakpoint--md) {
-    font-size: 4vw;
-  }
 
   &:before,
   &:after {

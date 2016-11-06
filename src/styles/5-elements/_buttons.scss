@@ -16,7 +16,7 @@
   transition: background $transitionDur $transitionEasing;
 
   @media screen and (min-width: $breakpoint--md) {
-    padding: 0.75rem $spacing--md;
+    padding: ($spacing--md / 2) $spacing--md;
   }
 
   &:after { // slight adjustment required for pseudowShadow

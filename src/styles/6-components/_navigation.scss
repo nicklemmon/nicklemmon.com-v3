@@ -1,6 +1,7 @@
 //== Navigation ==//
 
 .nav {
+
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -19,6 +20,6 @@
     text-transform: uppercase;
     text-decoration: none;
     color: $color--base;
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 700;
   }
