@@ -1,6 +1,7 @@
 //== Cards ==//
 
 .card {
+  @include boxShadow(10px);
   display: block;
   width: 100%;
   padding: $spacing--md;
@@ -9,7 +10,6 @@
   border-radius: $borderRadius;
   background: $color--white;
   border: 1px solid $color--base;
-  box-shadow: $boxShadow;
 }
 
 .card--btn {
