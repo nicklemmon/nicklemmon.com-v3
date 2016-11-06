@@ -2,11 +2,11 @@ extends layouts/default.pug
 
 block content
 
-  section.sect.sect--alt.sect--angle.hero
+  section.sect.sect--primary.sect--angle.hero
     h1.tagline.tagline--h1.u-mgTop--xl Front-end Web&nbsp;Design
     .hero__taglineContainer
       h2.tagline.tagline--h2 in Durham, NC
-    a.btn.btn--primary(tabindex="0")
+    a.btn.btn--secondary(tabindex="0")
       span.btn__txt See My Stuff!
 
   //- Portfolio section
@@ -19,15 +19,13 @@ block content
     //- grid of portfolio items
     include partials/mixins/portfolioCard.pug
 
-    .gr.gr--xs
+    .gr.gr--xs.gr--narrowXs
       .gr__col--1-4
         +portfolioCard('thumb-01', 'Alt Stuff!')
       .gr__col--1-4
         +portfolioCard('thumb-02', 'Alt Stuff!')
       .gr__col--1-4
         +portfolioCard('thumb-03', 'Alt Stuff!')
-      .gr__col--1-4
-        +portfolioCard('thumb-04', 'Alt Stuff!')
 
     .gr.gr--xs
       .gr__col--1-4
@@ -48,7 +46,7 @@ block content
         +portfolioCard('thumb-04', 'Alt Stuff!')
 
   //- 'My Skillset' section
-  section.sect.sect--alt.sect--angle.u-pdTop--xl
+  section.sect.sect--primary.sect--angle.u-slideUp.u-pdTop--xl
     .gr.gr--xs
       .gr__col--1-2
         h4 My Skillset
@@ -79,18 +77,22 @@ block content
         a.card.card--btn.card--flexCenter(tabindex="0")
           include partials/svg/handlebars.pug
 
-  //- 'About Me' sections
+  //- 'About Me' section
   section.sect
-    .gr.gr--xs
+    .gr.gr--xs.u-pdY--lg
       .gr__col--1-3
         picture.avatar
           img.avatar__img(src="/images/me.webp", alt="Me!")
-      .gr__col--2-3.paragraph--paddingCol
+      .gr__col--2-3
         h4 About Me
-        p I’m currently working for the BB&amp;T Digital Channel, doing visual design and front-end web development.
-        p To see more work, find me elsewhere on the interwebs. You can always send me a message as well.
+        .paragraph--paddingCol
+          p I’m currently working for the BB&amp;T Digital Channel, doing visual design and front-end web development.
+          p To see more work, find me elsewhere on the interwebs. You can always send me a message as well.
 
-    .gr.card.card--fluid.u-mgTop--lg.u-pdTop--lg.u-pdBottom--md
+
+  //- 'Contact' section
+  section.sect.sect--secondary.u-mgTop--xl
+    .gr.card.card--fluid.u-slideUp.u-pdTop--lg.u-pdBottom--md
       h4 Send a message
       p Send me your name and email address and I'll get back with you shortly. I won't share your information with anyone.
 
@@ -108,7 +110,7 @@ block content
           input.form__input(id="email-address", name="email-address", type="text", placeholder="Email Address", required)
           label.form__label(for="email-address") Email Address
 
-        button.btn.btn--secondary.btn--small-full.u-mgTop--md(type="submit", method="post")
+        button.btn.btn--primary.btn--small-full.u-mgTop--md(type="submit", method="post")
           span.btn__txt Send
 
   //- Modals/lightboxes used to display portfolio content

@@ -5,14 +5,27 @@
   padding: $spacing--lg $spacing--md;
 }
 
-.sect--alt {
-  color: $color--white;
+.sect--primary {
   background:
     linear-gradient(
       rgba($color--primary, 0.9),
       rgba($color--primary, 0.9)
     ),
     url('/images/nc-mountains.webp');
+}
+
+.sect--secondary {
+  background:
+    linear-gradient(
+      rgba($color--secondary, 0.9),
+      rgba($color--secondary, 0.9)
+    ),
+    url('/images/nc-mountains.webp');
+}
+
+.sect--primary,
+.sect--secondary {
+  color: $color--white;
   background-size: cover;
   position: relative;
   z-index: $layer--low;
@@ -25,5 +38,15 @@
 
   @media screen and (min-width: $breakpoint--sm) {
     clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+  }
+}
+
+.sect--angleReverse {
+  position: relative;
+  z-index: $layer--bottom;
+  padding-bottom: $spacing--lg; // a little extra breathing room so the angle doesn't cut off the content
+
+  @media screen and (min-width: $breakpoint--sm) {
+    clip-path: polygon(0 0, 100% 8%, 100% 108%, 0 100%);
   }
 }
