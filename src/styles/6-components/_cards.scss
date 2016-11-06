@@ -1,7 +1,6 @@
 //== Cards ==//
 
 .card {
-  @include pseudoShadow();
   display: block;
   width: 100%;
   padding: $spacing--md;
@@ -15,6 +14,7 @@
   cursor: pointer;
   overflow: hidden;
   height: 20rem;
+  box-shadow: $boxShadow;
 
   @media screen and (min-width: $breakpoint--xs) {
     height: 20vw;
@@ -37,7 +37,7 @@
 }
 
 .card--border {
-  border: 1px solid rgba($color--base, 0.2);
+  border: 1px solid $color--base;
 }
 
 .card__svgIcon {

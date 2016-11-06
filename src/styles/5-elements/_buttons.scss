@@ -1,7 +1,7 @@
 //== Buttons ==//
 
 .btn {
-  @include pseudoShadow(); // defines position: relative;, fortunately!
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@
   border-radius: $borderRadius;
   cursor: pointer;
   color: $color--white;
-  overflow: hidden;
+  box-shadow: $boxShadow;
   transition: background $transitionDur $transitionEasing;
 
   @media screen and (min-width: $breakpoint--md) {
