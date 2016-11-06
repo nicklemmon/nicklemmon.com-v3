@@ -1,13 +1,17 @@
 //== Footer ==//
 
 .footer {
+  color: $color--white;
+  margin-top: $spacing--lg;
+}
+
+.footer__btnRow {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  height: 6rem;
+  height: 5rem;
   background: $color--base;
-  color: $color--white;
 }
 
 .footer__btn {
@@ -17,10 +21,13 @@
   width: 100%;
   padding: $spacing--sm $spacing--md;
   cursor: pointer;
-  transition: background $transitionDur $transitionEasing;
+  border-bottom: 0 solid $color--secondary; // just need to make the transition work
+  transition: background $transitionDur $transitionEasing,
+              border-bottom $transitionDur $transitionEasing;
 
   &:hover {
     background: $color--baseLight;
+    border-bottom: ($spacing--sm / 2) solid $color--secondary;
   }
 }
 
@@ -29,14 +36,25 @@
   height: 100%;
 
   &--github {
-    max-height: 65%;
-  }
-
-  &--codepen {
     max-height: 75%;
   }
 
+  &--codepen {
+    max-height: 85%;
+  }
+
   &--twitter {
-    max-height: 55%;
+    max-height: 65%;
+  }
+}
+
+.footer__subFooter {
+  background: $color--baseLight;
+
+  .gr {
+    padding: $spacing--xs $spacing--md;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

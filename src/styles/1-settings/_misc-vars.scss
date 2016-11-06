@@ -1,13 +1,14 @@
 //== Misc Vars ==//
 
 //== Spacing
+$spacing--xs: 0.5rem;
 $spacing--sm: 1rem;
 $spacing--md: 1.5rem;
 $spacing--lg: 3rem;
 $spacing--xl: 5rem;
 
 //== Breakpoints
-$breakpoint--xs: 544px;
+$breakpoint--xs: 480px;
 $breakpoint--sm: 768px;
 $breakpoint--md: 992px;
 $breakpoint--lg: 1200px;
@@ -20,10 +21,10 @@ $layer--high:     10;
 $layer--top:      15;
 
 //== Animation Schtuff
-$transitionDur:     0.25s;
+$transitionDur:     0.2s;
 $transitionEasing:  ease-out;
 
 //== Misc
 $sectionRotation: 3deg;
-$borderRadius: 12px;
+$borderRadius: 14px;
 $boxShadow: 0 0.6rem 7px -0.1rem rgba(#000, 0.1);

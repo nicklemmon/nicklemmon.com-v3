@@ -17,6 +17,11 @@
   clip: rect(1px, 1px, 1px, 1px) !important;
 }
 
+//== Blockin' that scroll action
+.u-overflow--hidden {
+  overflow: hidden;
+}
+
 //== Floatin'
 .u-float--none {
   float: none !important;
@@ -28,6 +33,10 @@
 
 .u-float--right {
   float: right !important;
+}
+
+.u-clear--both {
+  clear: both !important;
 }
 
 //== Displayin'

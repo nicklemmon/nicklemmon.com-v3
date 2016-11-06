@@ -7,7 +7,6 @@
 
   @media screen and (min-width: $breakpoint--xs) {
     float: right;
-    margin-right: $spacing--lg;
   }
 }
 
@@ -18,7 +17,7 @@
   box-shadow: 0 0.3rem 13px -0.1rem rgba(#000, 0.25);
 
   @media screen and (min-width: $breakpoint--xs) {
-    width: 13.5rem;
-    height: 13.5rem;
+    width: 10rem;
+    height: 10rem;
   }
 }

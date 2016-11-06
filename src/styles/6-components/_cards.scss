@@ -3,23 +3,22 @@
 .card {
   @include pseudoShadow();
   display: block;
-  height: 18rem;
   width: 100%;
   padding: $spacing--md;
   border-radius: $borderRadius;
   background: $color--white;
   position: relative;
   z-index: $layer--mid;
-  cursor: pointer;
 }
 
 .card--btn {
+  cursor: pointer;
   overflow: hidden;
-  animation: bounceOutReturn $transitionDur $transitionEasing forwards;
+  height: 20rem;
 
-  &:hover,
-  &:focus {
-    animation: bounceOut $transitionDur $transitionEasing forwards;
+  @media screen and (min-width: $breakpoint--xs) {
+    height: 20vw;
+    max-height: 200px;
   }
 
   &.is-active {

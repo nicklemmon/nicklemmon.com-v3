@@ -5,5 +5,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
   if ( $('.js-modalOpen').length ) {
     Portfolio.Global.Modal.init();
   }
-  
+
 });

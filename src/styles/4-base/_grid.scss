@@ -3,8 +3,12 @@
 // settings can be found in there
 
 .gr {
-  @include center(844px);
-  padding-bottom: $spacing--lg;
+  @include center($breakpoint--md);
+  padding-bottom: $spacing--md;
+}
+
+.gr--full {
+  @include center(100%);
 }
 
 //== Columns
@@ -116,5 +120,14 @@ $list-o-columns: (
         padding-bottom: $spacing--lg;
       }
     }
+  }
+}
+
+//== Narrow Grid Rows
+// Used for grid rows that do not span the full width of the page
+.gr--narrowXs {
+  @media screen and (min-width: $breakpoint--xs) {
+    display: flex;
+    justify-content: center;
   }
 }

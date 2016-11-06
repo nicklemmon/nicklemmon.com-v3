@@ -1,35 +1,51 @@
 //== Typography ==//
 
-//== Base
+// Defining baseline
+$baseline: $spacing--sm;
+
+// Screen min and max for font purposes //
+$screen--min: $breakpoint--xs;
+$screen--max: $breakpoint--lg;
+
+// Font size min and max //
+$fontSize--min: 0.9rem;
+$fontSize--max: 1.1rem;
+
 html {
-  font-size: 62.5%; // see https://snook.ca/archives/html_and_css/font-size-with-rem
-  font-family: $fontStack--primary;
   color: $color--base;
+  font-family: $fontStack--primary;
+  @include fluid-type(font-size, $screen--min, $screen--max, $fontSize--min, $fontSize--max); // mixin from http://codepen.io/MadeByMike/pen/bEEGvv?editors%3D0100
 }
 
-//== Headings
+// using http://modularscale.com using 1.5 ratio
+$headings-map: (
+  h1: 2.856rem,
+  h2: 2.197rem,
+  h3: 1.69rem,
+  h4: 1.3rem,
+  h5: 1rem
+);
+
+// Headings //
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-family: $fontStack--secondary;
+  margin-bottom: $spacing--sm;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
 }
 
-// Sizes defined using http://modularscale.com 1.5 ratio
-h1 {
-  font-size: 5.5rem;
-}
-
-h2 {
-  font-size: 3.667rem;
-}
-
-h3 {
-  font-size: 2.444rem;
-}
-
-h4 {
-  font-size: 1.63rem;
+@each $heading, $val in $headings-map {
+  #{$heading} {
+    font-size: $val;
+    line-height: $val;
+    margin-top: calc((#{$baseline} - #{$val}) + #{$baseline}); // mixin from http://codepen.io/MadeByMike/pen/bEEGvv?editors%3D0100
+  }
 }
 
 hr {
@@ -39,8 +55,12 @@ hr {
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 300;
   line-height: 1.85;
   letter-spacing: 0.06rem;
+
+  @media screen and (min-width: $breakpoint--xs) {
+    font-size: 0.9rem;
+  }
 }

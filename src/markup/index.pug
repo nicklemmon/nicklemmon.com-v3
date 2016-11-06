@@ -3,114 +3,123 @@ extends layouts/default.pug
 block content
 
   section.sect.sect--alt.sect--angle.hero
-    .sect__container.u-mgTop--xl
-      h1.tagline.tagline--h1.hero__tagline.u-mgTop--lg Front-end Web Design
-      .hero__taglineContainer
-        h2.tagline.tagline--h2.hero__tagline in Durham, NC
-      a.btn.btn--primary(tabindex="0")
-        span.btn__txt See My Stuff!
+    h1.tagline.tagline--h1.u-mgTop--xl Front-end Web&nbsp;Design
+    .hero__taglineContainer
+      h2.tagline.tagline--h2 in Durham, NC
+    a.btn.btn--primary(tabindex="0")
+      span.btn__txt See My Stuff!
 
   //- Portfolio section
   section.sect
-    .sect__container.u-pdBottom--xl
-      .gr
-        .gr__col--1-2.u-mgBottom--lg
-          h3 My Work
-          hr
-          p A selection of a few designs and code snippets.
+    .gr.gr--xs
+      .gr__col--1-2
+        h4 My Work
+        p A selection of a few designs and code snippets.
 
-      //- grid of portfolio items
-      include partials/mixins/portfolioCard.pug
+    //- grid of portfolio items
+    include partials/mixins/portfolioCard.pug
 
-      .gr.gr--sm
-        .gr__col--1-4
-          +portfolioCard('thumb-01', 'Alt Stuff!')
-        .gr__col--1-4
-          +portfolioCard('thumb-02', 'Alt Stuff!')
-        .gr__col--1-4
-          +portfolioCard('thumb-03', 'Alt Stuff!')
-        .gr__col--1-4
-          +portfolioCard('thumb-04', 'Alt Stuff!')
+    .gr.gr--xs
+      .gr__col--1-4
+        +portfolioCard('thumb-01', 'Alt Stuff!')
+      .gr__col--1-4
+        +portfolioCard('thumb-02', 'Alt Stuff!')
+      .gr__col--1-4
+        +portfolioCard('thumb-03', 'Alt Stuff!')
+      .gr__col--1-4
+        +portfolioCard('thumb-04', 'Alt Stuff!')
 
-      .gr.gr--xs
-        .gr__col--1-4
-          +portfolioCard('thumb-05', 'Alt Stuff!')
-        .gr__col--1-4
-          +portfolioCard('thumb-06', 'Alt Stuff!')
-        .gr__col--1-4
-          +portfolioCard('thumb-07', 'Alt Stuff!')
-        .gr__col--1-4
-          +portfolioCard('thumb-08', 'Alt Stuff!')
+    .gr.gr--xs
+      .gr__col--1-4
+        +portfolioCard('thumb-05', 'Alt Stuff!')
+      .gr__col--1-4
+        +portfolioCard('thumb-06', 'Alt Stuff!')
+      .gr__col--1-4
+        +portfolioCard('thumb-07', 'Alt Stuff!')
+      .gr__col--1-4
+        +portfolioCard('thumb-08', 'Alt Stuff!')
+
+    .gr.gr--xs.gr--narrowXs
+      .gr__col--1-4
+        +portfolioCard('thumb-04', 'Alt Stuff!')
+      .gr__col--1-4
+        +portfolioCard('thumb-04', 'Alt Stuff!')
+      .gr__col--1-4
+        +portfolioCard('thumb-04', 'Alt Stuff!')
 
   //- 'My Skillset' section
   section.sect.sect--alt.sect--angle.u-pdTop--xl
-    .sect__container
-      .gr
-        .gr__col--1-2.u-mgBottom--lg
-          h3 My Skillset
-          hr
-          p I'm a generalist with visual design and front-end development skills.
+    .gr.gr--xs
+      .gr__col--1-2
+        h4 My Skillset
+        p I'm a generalist with visual design and front-end development skills.
 
-      .gr.gr--xs
-        .gr__col--1-4
-          a.card.card--flexCenter(tabindex="0")
-            include partials/svg/html5.pug
-        .gr__col--1-4
-          a.card.card--flexCenter(tabindex="0")
-            include partials/svg/sass.pug
-        .gr__col--1-4
-          a.card.card--flexCenter(tabindex="0")
-            include partials/svg/js.pug
-        .gr__col--1-4
-          a.card.card--flexCenter(tabindex="0")
-            include partials/svg/adobe-cc.pug
+    .gr.gr--xs
+      .gr__col--1-4
+        a.card.card--btn.card--flexCenter(tabindex="0")
+          include partials/svg/html5.pug
+      .gr__col--1-4
+        a.card.card--btn.card--flexCenter(tabindex="0")
+          include partials/svg/sass.pug
+      .gr__col--1-4
+        a.card.card--btn.card--flexCenter(tabindex="0")
+          include partials/svg/js.pug
+      .gr__col--1-4
+        a.card.card--btn.card--flexCenter(tabindex="0")
+          include partials/svg/adobe-cc.pug
 
-      .gr.gr--xs.u-display--flex.u-jstContent--center
-        .gr__col--1-4
-          a.card.card--flexCenter(tabindex="0")
-            include partials/svg/sketch.pug
-        .gr__col--1-4
-          a.card.card--flexCenter(tabindex="0")
-            include partials/svg/terminal.pug
-        .gr__col--1-4
-          a.card.card--flexCenter(tabindex="0")
-            include partials/svg/handlebars.pug
+    .gr.gr--xs.gr--narrowXs
+      .gr__col--1-4
+        a.card.card--btn.card--flexCenter(tabindex="0")
+          include partials/svg/sketch.pug
+      .gr__col--1-4
+        a.card.card--btn.card--flexCenter(tabindex="0")
+          include partials/svg/terminal.pug
+      .gr__col--1-4
+        a.card.card--btn.card--flexCenter(tabindex="0")
+          include partials/svg/handlebars.pug
 
   //- 'About Me' sections
   section.sect
-    .sect__container
-      .gr.gr--xs
-        .gr__col--1-3
-          picture.avatar
-            img.avatar__img(src="/images/me.webp", alt="Me!")
-        .gr__col--1-3
-          h3 About Me
-          hr
-          p I’m currently working for the BB&amp;T Digital Channel, doing visual design and front-end web development.
-        .gr__col--1-3
-          p.paragraph--paddingCol To see more work, find me elsewhere on the interwebs. You can always send me a message as well.
+    .gr.gr--xs
+      .gr__col--1-3
+        picture.avatar
+          img.avatar__img(src="/images/me.webp", alt="Me!")
+      .gr__col--2-3.paragraph--paddingCol
+        h4 About Me
+        p I’m currently working for the BB&amp;T Digital Channel, doing visual design and front-end web development.
+        p To see more work, find me elsewhere on the interwebs. You can always send me a message as well.
 
-      .gr.card.card--border.card--fluid.u-mgTop--xl.u-pdY--xl.u-pdX--lg
-        h4 Send a message
-        hr
-        p Send me your name and email address and I'll get back with you shortly.
+    .gr.card.card--border.card--fluid.u-mgTop--lg.u-pdTop--lg.u-pdBottom--md
+      h4 Send a message
+      p Send me your name and email address and I'll get back with you shortly. I won't share your information with anyone.
 
-        form.form.u-mgTop--lg
-          .gr.gr--xs
-            fieldset.gr__col--1-2.form__fieldset
-              input.form__input(id="first-name", name="first-name", type="text", placeholder="First Name", required)
-              label.form__label(for="first-name") First Name
+      form.form.u-mgTop--md
+        .gr.gr--xs
+          fieldset.gr__col--1-2.form__fieldset
+            input.form__input(id="first-name", name="first-name", type="text", placeholder="First Name", required)
+            label.form__label(for="first-name") First Name
 
-            fieldset.gr__col--1-2.form__fieldset
-              input.form__input(id="last-name", name="last-name", type="text", placeholder="Last Name", required)
-              label.form__label(for="last-name") Last Name
+          fieldset.gr__col--1-2.form__fieldset
+            input.form__input(id="last-name", name="last-name", type="text", placeholder="Last Name", required)
+            label.form__label(for="last-name") Last Name
 
-          fieldset.form__fieldset
-            input.form__input(id="email-address", name="email-address", type="text", placeholder="Email Address", required)
-            label.form__label(for="email-address") Email Address
+        fieldset.form__fieldset
+          input.form__input(id="email-address", name="email-address", type="text", placeholder="Email Address", required)
+          label.form__label(for="email-address") Email Address
 
-          button.btn.btn--secondary.u-display--block.u-mgTop--lg.u-mgX--auto(type="submit", method="post")
-            span.btn__txt Send
+        button.btn.btn--secondary.u-mgTop--md(type="submit", method="post")
+          span.btn__txt Send
 
+  //- Modals/lightboxes used to display portfolio content
+  include partials/mixins/portfolioModal.pug
 
-  .modal__overlay.is-hidden
+  +portfolioModal('thumb-01')
+  +portfolioModal('thumb-02')
+  +portfolioModal('thumb-03')
+  +portfolioModal('thumb-04')
+  +portfolioModal('thumb-05')
+  +portfolioModal('thumb-06')
+  +portfolioModal('thumb-07')
+  +portfolioModal('thumb-08')
+  +portfolioModal('thumb-09')
