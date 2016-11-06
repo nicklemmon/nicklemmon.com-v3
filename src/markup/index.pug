@@ -111,7 +111,15 @@ block content
         button.btn.btn--secondary.u-mgTop--md(type="submit", method="post")
           span.btn__txt Send
 
-  //- lightbox/modal for viewing portfolio items and other schtuff
-  //- pairing this with JS that adds utility classes to the body makes the magic happen
-  .modal__overlay.is-hidden
-    .modal.is-hidden
+  //- Modals/lightboxes used to display portfolio content
+  include partials/mixins/portfolioModal.pug
+
+  +portfolioModal('thumb-01')
+  +portfolioModal('thumb-02')
+  +portfolioModal('thumb-03')
+  +portfolioModal('thumb-04')
+  +portfolioModal('thumb-05')
+  +portfolioModal('thumb-06')
+  +portfolioModal('thumb-07')
+  +portfolioModal('thumb-08')
+  +portfolioModal('thumb-09')

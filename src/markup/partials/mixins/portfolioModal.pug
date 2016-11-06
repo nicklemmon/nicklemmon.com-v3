@@ -1,0 +1,7 @@
+mixin portfolioModal(target)
+  .modal__overlay.js-modalOverlay.is-hidden
+    .modal.js-modal(data-target=target).is-hidden
+      if block
+        block
+      else
+        p There is no content :(
