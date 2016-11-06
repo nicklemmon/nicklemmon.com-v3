@@ -1,27 +1,14 @@
 //== Sass Mixins ==//
 
-//== PseudoShadow
-@mixin pseudoShadow() { // Pseudo element shadow that is < the width of the parent element, determined by percentage
-  position: relative;
-
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: $layer--low;
-    bottom: 0;
-    left: 20%;
-    height: 5px;
-    width: 60%;
-    background: rgba(0, 0, 0, 0);
-    box-shadow: $boxShadow;
-  }
-}
-
 //== Size Mixin
 @mixin size($val) {
   height: $val;
   width: $val;
+}
+
+//== Box Shadow Mixin
+@mixin boxShadow($length) {
+  box-shadow: 0 $length ($length / 2) (-$length / 2) rgba(#000, 0.15);
 }
 
 //== Fluid Type Mixin from https://codepen.io/MadeByMike/pen/vNrvdZ

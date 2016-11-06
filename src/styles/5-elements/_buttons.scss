@@ -1,7 +1,8 @@
 //== Buttons ==//
 
 .btn {
-  @include pseudoShadow(); // defines position: relative;, fortunately!
+  @include boxShadow(8px);
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +13,6 @@
   border-radius: $borderRadius;
   cursor: pointer;
   color: $color--white;
-  overflow: hidden;
   transition: background $transitionDur $transitionEasing;
 
   @media screen and (min-width: $breakpoint--md) {
@@ -44,10 +44,22 @@
 .btn__txt {
   position: relative;
   z-index: $layer--mid;
+  text-shadow: 0 0.1rem 5px rgba(#000, 0.1);
 }
 
 .btn--primary {
-  text-shadow: 0 0.1rem 5px rgba(#000, 0.1);
+  border: 0.1rem solid $color--primaryDark;
+  background: linear-gradient(0deg, $color--primaryDark, $color--primary);
+
+  &:hover,
+  &:focus {
+    &:before {
+      background: $color--primaryDark;
+    }
+  }
+}
+
+.btn--secondary {
   border: 0.1rem solid $color--secondaryDark;
   background: linear-gradient(0deg, $color--secondaryDark, $color--secondary);
 
@@ -59,14 +71,9 @@
   }
 }
 
-.btn--secondary {
-  border: 0.1rem solid $color--primaryDark;
-  background: linear-gradient(0deg, $color--primaryDark, $color--primary);
 
-  &:hover,
-  &:focus {
-    &:before {
-      background: $color--primaryDark;
-    }
+.btn--small-full { // goes full width on smaller screen sizes
+  @media screen and (max-width: $breakpoint--xs) {
+    width: 100%;
   }
 }

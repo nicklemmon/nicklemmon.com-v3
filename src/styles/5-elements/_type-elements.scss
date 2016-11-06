@@ -14,8 +14,7 @@
   text-shadow: 0 0.2rem 3px rgba($color--primaryDark, 0.5);
 }
 
-.tagline--h1,
-.tagline--h2 {
+.tagline--h1 {
   margin-bottom: $spacing--md;
 }
 
@@ -25,6 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: $spacing--lg;
 
   &:before,
   &:after {

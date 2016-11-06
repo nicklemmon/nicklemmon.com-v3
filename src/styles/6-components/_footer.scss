@@ -2,7 +2,6 @@
 
 .footer {
   color: $color--white;
-  margin-top: $spacing--lg;
 }
 
 .footer__btnRow {
@@ -49,7 +48,7 @@
 }
 
 .footer__subFooter {
-  background: $color--baseLight;
+  background: scale-color($color--base, $lightness: -50%);
 
   .gr {
     padding: $spacing--xs $spacing--md;

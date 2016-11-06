@@ -63,3 +63,8 @@
 .u-display--inlineFlex {
   display: inline-flex !important;
 }
+
+//== Other Stuff
+.u-slideUp { // used to apply negative top margin to allow previous content to visually overlap
+  margin-top: -$spacing--lg * 2.5;
+}
