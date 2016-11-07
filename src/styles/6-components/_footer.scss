@@ -24,7 +24,9 @@
   transition: background $transitionDur $transitionEasing,
               border-bottom $transitionDur $transitionEasing;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: none;
     background: $color--baseLight;
     border-bottom: ($spacing--sm / 2) solid $color--secondary;
   }
