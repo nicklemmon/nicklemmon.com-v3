@@ -5,6 +5,7 @@
 .gr {
   @include center($breakpoint--md);
   padding-bottom: $spacing--md;
+  perspective: 500; // used in conjunction with 3D transforms
 }
 
 .gr--full {

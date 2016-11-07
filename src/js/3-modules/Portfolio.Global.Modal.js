@@ -36,5 +36,11 @@ Portfolio.Global.Modal = {
     this.$overlay.on('click', function() {
       Portfolio.Global.Modal.closeModal();
     });
+
+    $(document).on('keyup', function(e) {
+      if (e.keyCode === 27) {
+        Portfolio.Global.Modal.closeModal();
+      }
+    });
   }
 }
