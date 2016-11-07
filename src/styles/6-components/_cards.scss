@@ -17,6 +17,8 @@
   cursor: pointer;
   overflow: hidden;
   height: 20rem;
+  transition: box-shadow $transitionDur $transitionEasing;
+  animation: cardHoverOut $transitionDur $transitionEasing forwards;
 
   @media screen and (min-width: $breakpoint--xs) {
     height: 20vw;
@@ -25,6 +27,17 @@
 
   &.is-active {
     animation: press $transitionDur $transitionEasing forwards;
+  }
+
+  &:hover,
+  &:focus {
+    @include boxShadow(25px);
+    outline: none;
+    animation: cardHoverIn $transitionDur $transitionEasing forwards;
+  }
+
+  &:focus {
+    border: 2px solid $color--secondary;
   }
 }
 
