@@ -1,7 +1,6 @@
 //== Navigation ==//
 
 .nav {
-
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -22,4 +21,8 @@
     color: $color--base;
     font-size: 0.85rem;
     font-weight: 700;
+
+    &:focus {
+      outline: 1px solid $color--secondary;
+    }
   }
