@@ -3,6 +3,10 @@
 .paragraph--paddingCol {
   columns: 1;
 
+  p {
+    margin-bottom: $spacing--sm;
+  }
+
   @media screen and (min-width: $breakpoint--sm) {
     columns: 2;
   }
