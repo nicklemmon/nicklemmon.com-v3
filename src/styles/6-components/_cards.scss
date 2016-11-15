@@ -43,6 +43,12 @@
 
 .card--fluid {
   height: auto; // when you just don't want to be limited by silly things like height
+
+  @media screen and (max-width: $breakpoint--sm) { // no rounded corners on smallest screen sizes as it typically spans the width of the viewport
+    border-radius: 0;
+    border-right: 1px solid $color--white;
+    border-left: 1px solid $color--white;
+  }
 }
 
 .card--flexCenter {
