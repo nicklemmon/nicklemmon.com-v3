@@ -31,13 +31,13 @@
 
   &:hover,
   &:focus {
-    @include boxShadow(25px);
+    @include boxShadow(30px);
     outline: none;
     animation: cardHoverIn $transitionDur $transitionEasing forwards;
   }
 
   &:focus {
-    border: 2px solid $color--secondary;
+    border: 1px solid $color--secondary;
   }
 }
 

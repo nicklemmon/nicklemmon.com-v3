@@ -8,7 +8,7 @@
 
 //== Box Shadow Mixin
 @mixin boxShadow($length) {
-  box-shadow: 0 $length ($length / 2) (-$length / 2) rgba(#000, 0.15);
+  box-shadow: 0 $length $length (-$length / 2) rgba(#000, 0.15);
 }
 
 //== Fluid Type Mixin from https://codepen.io/MadeByMike/pen/vNrvdZ
