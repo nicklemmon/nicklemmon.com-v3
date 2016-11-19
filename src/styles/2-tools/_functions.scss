@@ -1,1 +1,6 @@
 //== Sass Functions ==//
+
+//== Needed for fluid-type mixin also from https://codepen.io/MadeByMike/pen/vNrvdZ
+@function strip-unit($value) {
+	@return $value / ($value * 0 + 1);
+}
