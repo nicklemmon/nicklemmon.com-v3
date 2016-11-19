@@ -1,7 +1,7 @@
 //== Cards ==//
 
 .card {
-  @include boxShadow(10px);
+  @include boxShadow(5px);
   display: block;
   position: relative;
   width: 100%;
