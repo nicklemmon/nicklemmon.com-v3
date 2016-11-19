@@ -20,7 +20,7 @@
   width: 100%;
   padding: $spacing--sm $spacing--md;
   cursor: pointer;
-  border-bottom: 0 solid $color--secondary; // just need to make the transition work
+  border-bottom: 2px solid $color--base; // just need to make the transition work
   transition: background $transitionDur $transitionEasing,
               border-bottom $transitionDur $transitionEasing;
 
@@ -28,7 +28,7 @@
   &:focus {
     outline: none;
     background: $color--baseLight;
-    border-bottom: ($spacing--sm / 2) solid $color--secondary;
+    border-bottom: 2px solid $color--secondary;
   }
 }
 
