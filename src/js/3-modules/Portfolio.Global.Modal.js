@@ -28,8 +28,8 @@ Portfolio.Global.Modal = {
     this.$openTrigger.on('click keypress', function(e) {
       e.preventDefault();
 
-      if (e.which === 13 || e.type === 'click') {
-        Portfolio.Global.Modal.openModal($(this));
+      if ( e.which === 13 || e.type === 'click' ) {
+        Portfolio.Global.Modal.openModal( $(this) );
       }
     });
 
