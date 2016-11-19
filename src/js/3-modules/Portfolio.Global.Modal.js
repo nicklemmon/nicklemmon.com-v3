@@ -10,7 +10,13 @@ Portfolio.Global.Modal = {
     this.$openTrigger = $('.js-modalOpen');
     this.$closeTrigger = $('.js-modalClose');
   },
-  openModal: function($thisElem) {
+  pressIn: function( $thisElem ) {
+    $thisElem.removeClass('is-inactive').addClass('is-active');
+  },
+  pressOut: function() {
+    this.$openTrigger.removeClass('is-active').addClass('is-inactive');
+  },
+  openModal: function( $thisElem ) {
     var thisHref = $thisElem.attr('href');
     var $targetModal = $("[data-target='" + thisHref + "']");
     var $parentOverlay = $targetModal.closest('.modal__overlay');
@@ -30,16 +36,19 @@ Portfolio.Global.Modal = {
 
       if ( e.which === 13 || e.type === 'click' ) {
         Portfolio.Global.Modal.openModal( $(this) );
+        Portfolio.Global.Modal.pressIn( $(this) );
       }
     });
 
     this.$overlay.on('click', function() {
       Portfolio.Global.Modal.closeModal();
+      Portfolio.Global.Modal.pressOut();
     });
 
     $(document).on('keyup', function(e) {
       if (e.keyCode === 27) {
         Portfolio.Global.Modal.closeModal();
+        Portfolio.Global.Modal.pressOut();
       }
     });
   }

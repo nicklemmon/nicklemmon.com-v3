@@ -10,13 +10,11 @@
   overflow-y: scroll;
 
   &.is-hidden {
-    visibility: hidden;
-    opacity: 0;
+    animation: fadeOutDown $transitionDur $transitionEasing forwards;
   }
 
   &.is-visible {
-    visibility: visible;
-    opacity: 1;
+    animation: fadeInUp $transitionDur $transitionEasing forwards;
   }
 }
 

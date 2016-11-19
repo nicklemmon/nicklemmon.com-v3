@@ -1,12 +1,38 @@
 //== Animations ==//
 
-@keyframes press {
+@keyframes fadeInUp {
   0% {
-    transform: scale(1);
+    transform: translateY(0);
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  30% {
+    transform: translateY(-$spacing--sm);
   }
 
   100% {
-    transform: scale(0.9);
+    transform: translateY(0);
+    visibility: visible;;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutDown {
+  0% {
+    transform: translateY(0);
+    visibility: visible;;
+    opacity: 1;
+  }
+
+  70% {
+    transform: translateY($spacing--sm);
+  }
+
+  100% {
+    transform: translateY(-$spacing--sm);
+    visibility: hidden;
+    opacity: 0;
   }
 }
 

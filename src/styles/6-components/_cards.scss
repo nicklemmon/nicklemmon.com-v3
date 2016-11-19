@@ -26,10 +26,6 @@
   }
 
   // is-inactive/is-active added based on JS behavior
-  &.is-inactive {
-    animation: cardHoverOut $transitionDur $transitionEasing forwards;
-  }
-
   &.is-active,
   &:hover {
     animation: cardHoverIn $transitionDur $transitionEasing forwards;
