@@ -29,3 +29,31 @@
     transform: perspective(1000px) translateZ(0);
   }
 }
+
+@keyframes loadAnim--outer {
+  0% {
+    transform: scale(1.0);
+  }
+
+  50% {
+    transform: scale(2.0) rotateY(180deg);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+@keyframes loadAnim--inner {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(2.0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
