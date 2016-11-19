@@ -30,7 +30,7 @@
   }
 
   100% {
-    transform: translateY(-$spacing--sm);
+    transform: translateY($spacing--sm);
     visibility: hidden;
     opacity: 0;
   }
