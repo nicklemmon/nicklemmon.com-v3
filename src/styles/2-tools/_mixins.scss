@@ -6,6 +6,13 @@
   width: $val;
 }
 
+//== Flex Center mixin
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 //== Box Shadow Mixin
 @mixin boxShadow($length) {
   box-shadow: 0 $length $length (-$length / 2) rgba(#000, 0.15);
