@@ -57,3 +57,25 @@
     transform: scale(0);
   }
 }
+
+@keyframes skillFlipIn {
+  0% {
+    transform: rotateX(90deg);
+  }
+
+  100% {
+    transform: rotateX(0);
+    visibility: visible;
+  }
+}
+
+@keyframes skillFlipOut {
+  0% {
+    transform: rotateX(0);
+  }
+
+  100% {
+    transform: rotateX(90deg);
+    visibility: hidden;
+  }
+}

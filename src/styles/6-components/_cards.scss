@@ -25,15 +25,21 @@
     max-height: 200px;
   }
 
-  &.is-active {
-    animation: press $transitionDur $transitionEasing forwards;
+  &.is-inactive {
+    animation: cardHoverOut $transitionDur $transitionEasing forwards;
   }
 
-  &:hover,
-  &:focus {
-    @include boxShadow(30px);
-    outline: none;
+  &.is-active,
+  &:hover {
     animation: cardHoverIn $transitionDur $transitionEasing forwards;
+  }
+
+  &:hover {
+    @include boxShadow(30px);
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
@@ -68,34 +74,26 @@
   @include size(100%);
   @include flexCenter();
   flex-direction: column;
-  background: $color--white;
-  color: $color--primary;
+  background: rgba($color--secondary, 0.9);
+  color: $color--base;
   position: absolute;
   padding: $spacing--sm;
   transition: opacity $transitionDur $transitionEasing;
 
-  hr {
-    width: 100%;
-    margin: 0 0 $spacing--xs;
-  }
-
   &.is-hidden {
-    visibility: hidden;
-    opacity: 0;
+    animation: skillFlipOut $transitionDur $transitionEasing forwards;
   }
 
   &.is-visible {
-    visibility: visible;
-    opacity: 1;
+    animation: skillFlipIn $transitionDur $transitionEasing forwards;
   }
 }
 
 .card__msgHeading {
-  font-weight: 700;
   letter-spacing: 0.025em;
 }
 
 .card__msgText {
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.6;
 }

@@ -10,6 +10,7 @@ Portfolio.Global.SkillCard = {
   toggleMsg: function($thisElem) {
     var $thisMsg = $thisElem.find(this.$skillMsg);
 
+    $thisElem.toggleClass('is-inactive is-active');
     $thisMsg.toggleClass('is-hidden is-visible');
   },
   bindEvents: function() {
