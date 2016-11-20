@@ -25,11 +25,11 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: $spacing--xl;
+  padding: 5%;
   overflow: scroll; // prevents scrolling
   background: rgba(0, 0, 0, 0.75);
-  transition: visibility $transitionDur $transitionEasing,
-              opacity $transitionDur $transitionEasing;
+  transition: visibility ($transitionDur * 2) $transitionEasing,
+              opacity ($transitionDur * 2) $transitionEasing;
 
   &.is-hidden {
     visibility: hidden;
@@ -39,5 +39,22 @@
   &.is-displayed {
     visibility: visible;
     opacity: 1;
+  }
+}
+
+.modal__closeBtn {
+  @include size(20px);
+  float: right;
+  position: relative;
+  z-index: $layer--top;
+  cursor: pointer;
+  animation: growIn $transitionDur $transitionEasing forwards;
+
+  .icon--close {
+    fill: $color--primary;
+  }
+
+  &:hover {
+    animation: growOut $transitionDur $transitionEasing forwards;
   }
 }

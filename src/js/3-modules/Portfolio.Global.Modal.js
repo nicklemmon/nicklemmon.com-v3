@@ -40,7 +40,7 @@ Portfolio.Global.Modal = {
       }
     });
 
-    this.$overlay.on('click', function() {
+    this.$closeTrigger.on('click', function() {
       Portfolio.Global.Modal.closeModal();
       Portfolio.Global.Modal.pressOut();
     });
