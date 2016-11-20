@@ -4,6 +4,7 @@
   @include boxShadow(5px);
   display: block;
   position: relative;
+  height: auto;
   width: 100%;
   padding: $spacing--md;
   z-index: $layer--mid;
@@ -71,6 +72,8 @@
   background: rgba($color--secondary, 0.9);
   color: $color--base;
   position: absolute;
+  top: 0;
+  left: 0;
   padding: $spacing--sm;
   transition: opacity $transitionDur $transitionEasing;
 
