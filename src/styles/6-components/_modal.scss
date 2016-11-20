@@ -29,16 +29,19 @@
   overflow: scroll; // prevents scrolling
   background: rgba(0, 0, 0, 0.75);
   transition: visibility ($transitionDur / 2) $transitionEasing,
-              opacity ($transitionDur / 2) $transitionEasing;
+              opacity ($transitionDur / 2) $transitionEasing,
+              transform ($transitionDur / 2) $transitionEasing;
 
   &.is-hidden {
     visibility: hidden;
     opacity: 0;
+    transform: perspective(1000px) translateZ(0)
   }
 
-  &.is-displayed {
+  &.is-visible {
     visibility: visible;
     opacity: 1;
+    transform: perspective(1000px) translateZ(30px)
   }
 }
 
