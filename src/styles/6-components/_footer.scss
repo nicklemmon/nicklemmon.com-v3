@@ -20,15 +20,15 @@
   width: 100%;
   padding: $spacing--sm $spacing--md;
   cursor: pointer;
-  border-bottom: 2px solid $color--base; // just need to make the transition work
+  border-bottom: 5px solid $color--base; // just need to make the transition work
   transition: background $transitionDur $transitionEasing,
-              border-bottom $transitionDur $transitionEasing;
+              border-bottom ($transitionDur * 2) $transitionEasing;
 
   &:hover,
   &:focus {
     outline: none;
     background: $color--baseLight;
-    border-bottom: 2px solid $color--secondary;
+    border-bottom: 5px solid $color--secondary;
   }
 }
 
