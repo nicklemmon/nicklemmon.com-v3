@@ -108,11 +108,12 @@
   }
 
   70% {
-    transform: scaleX(1.3) scaleY(1.3);
+    transform: scaleX(1.2) scaleY(1.2);
   }
 
   100% {
-    transform: scaleX(1.2) scaleY(1.2);
+    transform: scaleX(1.1) scaleY(1.1);
+    fill: $color--primaryDark;
   }
 }
 
@@ -123,5 +124,6 @@
 
   100% {
     transform: scaleX(1) scaleY(1);
+    fill: $color--primary;
   }
 }
