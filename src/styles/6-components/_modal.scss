@@ -28,8 +28,8 @@
   padding: 8%;
   overflow: scroll; // prevents scrolling
   background: rgba(0, 0, 0, 0.75);
-  transition: visibility ($transitionDur * 1.25) $transitionEasing,
-              opacity ($transitionDur * 1.25) $transitionEasing;
+  transition: visibility ($transitionDur / 2) $transitionEasing,
+              opacity ($transitionDur / 2) $transitionEasing;
 
   &.is-hidden {
     visibility: hidden;
