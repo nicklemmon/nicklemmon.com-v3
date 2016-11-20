@@ -3,7 +3,7 @@
 .modal {
   max-width: $breakpoint--sm;
   margin: 0 auto;
-  padding: $spacing--lg;
+  padding: $spacing--md;
   background: $color--white;
   border-radius: $borderRadius;
   box-shadow: 0 $spacing--sm 10px rgba(darken($color--gray, 50%), 0.2);
@@ -25,7 +25,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 5%;
+  padding: 8%;
   overflow: scroll; // prevents scrolling
   background: rgba(0, 0, 0, 0.75);
   transition: visibility ($transitionDur * 1.25) $transitionEasing,
