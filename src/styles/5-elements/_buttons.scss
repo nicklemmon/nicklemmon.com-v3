@@ -48,19 +48,23 @@
 }
 
 .btn--primary {
-  border: 0.1rem solid $color--primaryDark;
+  border: 2px solid $color--primaryDark;
   background: linear-gradient(0deg, $color--primaryDark, $color--primary);
 
   &:hover,
   &:focus {
     &:before {
-      background: $color--primaryDark;
+      background: $color--primary;
     }
+  }
+
+  &:focus {
+    border: 2px solid $color--primary;
   }
 }
 
 .btn--secondary {
-  border: 0.1rem solid $color--secondaryDark;
+  border: 2px solid $color--secondaryDark;
   background: linear-gradient(0deg, $color--secondaryDark, $color--secondary);
 
   &:hover,
@@ -68,6 +72,10 @@
     &:before {
       background: $color--secondaryDark;
     }
+  }
+
+  &:focus {
+    border: 2px solid $color--secondary;
   }
 }
 

@@ -1,0 +1,24 @@
+//== Loader ==//
+
+.loader {
+  @include boxShadow(10px);
+  background: $color--secondary;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: loadAnim--outer 2.5s $transitionEasing infinite;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    background: scale-color($color--secondary, $lightness: -30%);
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    animation: loadAnim--inner 2.5s $transitionEasing infinite;
+  }
+}

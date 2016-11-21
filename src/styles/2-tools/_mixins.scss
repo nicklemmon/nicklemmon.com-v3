@@ -6,9 +6,16 @@
   width: $val;
 }
 
+//== Flex Center mixin
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 //== Box Shadow Mixin
 @mixin boxShadow($length) {
-  box-shadow: 0 $length ($length / 2) (-$length / 2) rgba(#000, 0.15);
+  box-shadow: 0 $length $length (-$length / 2) rgba(#000, 0.15);
 }
 
 //== Fluid Type Mixin from https://codepen.io/MadeByMike/pen/vNrvdZ
@@ -30,9 +37,4 @@
 			}
 		}
 	}
-}
-
-//== Needed for fluid-type mixin also from https://codepen.io/MadeByMike/pen/vNrvdZ
-@function strip-unit($value) {
-	@return $value / ($value * 0 + 1);
 }

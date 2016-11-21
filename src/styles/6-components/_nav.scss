@@ -1,0 +1,35 @@
+//== Navigation ==//
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  z-index: $layer--mid; // allows shadow to overlap section below
+  padding: $spacing--sm $spacing--md;
+  background: transparent;
+}
+
+.nav__menuBtn,
+.nav__brand {
+  color: $color--white;
+  text-decoration: none;
+}
+
+.nav__brand {
+  line-height: 0;
+}
+
+.nav__menuBtn {
+  padding: 0.75rem $spacing--sm;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: $borderRadius;
+  transition: border $transitionDur $transitionEasing;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 2px solid $color--white;
+  }
+}

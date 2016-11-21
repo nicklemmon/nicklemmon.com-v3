@@ -1,8 +1,8 @@
 //== Hero styles ==//
 
 .hero {
-  margin-top: -$spacing--xl;
-  padding: ($spacing--lg * 2) $spacing--md;
+  margin-top: -$spacing--lg * 3; // hides top angle
+  padding: ($spacing--lg * 3) $spacing--md;
   display: flex;
   flex-direction: column;
   align-items: center;

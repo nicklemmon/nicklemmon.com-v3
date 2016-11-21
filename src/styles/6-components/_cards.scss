@@ -1,11 +1,13 @@
 //== Cards ==//
 
 .card {
-  @include boxShadow(10px);
+  @include boxShadow(5px);
+  box-sizing: border-box;
   display: block;
+  position: relative;
+  height: auto;
   width: 100%;
   padding: $spacing--md;
-  position: relative;
   z-index: $layer--mid;
   border-radius: $borderRadius;
   background: $color--white;
@@ -13,23 +15,49 @@
   border: 1px solid $color--base;
 }
 
+.card__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: $breakpoint--md;
+  margin: 0 auto;
+}
+
 .card--btn {
+  width: 100%;
+  height: 150px;
+  margin: $spacing--sm;
   cursor: pointer;
   overflow: hidden;
-  height: 20rem;
+  transition: box-shadow $transitionDur $transitionEasing;
+  animation: cardHoverOut $transitionDur $transitionEasing forwards;
 
-  @media screen and (min-width: $breakpoint--xs) {
-    height: 20vw;
-    max-height: 200px;
+  // is-inactive/is-active added based on JS behavior
+  &.is-active,
+  &:hover {
+    animation: cardHoverIn $transitionDur $transitionEasing forwards;
+    @include boxShadow(30px);
   }
 
-  &.is-active {
-    animation: press $transitionDur $transitionEasing forwards;
+  &:focus {
+    outline: none;
+  }
+
+  @media screen and (min-width: $breakpoint--xs) {
+    @include size(200px);
   }
 }
 
 .card--fluid {
   height: auto; // when you just don't want to be limited by silly things like height
+
+  @media screen and (max-width: $breakpoint--sm) { // no rounded corners on smallest screen sizes as it typically spans the width of the viewport
+    border-radius: 0;
+    border-right: 1px solid $color--white;
+    border-left: 1px solid $color--white;
+  }
 }
 
 .card--flexCenter {
@@ -47,4 +75,34 @@
   width: 100%;
   height: 100%;
   object-fit: cover; // similar to background-size: cover;
+}
+
+.card__msg {
+  @include size(100%);
+  @include flexCenter();
+  flex-direction: column;
+  background: rgba($color--secondary, 0.9);
+  color: $color--base;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: $spacing--sm;
+  transition: opacity $transitionDur $transitionEasing;
+
+  &.is-hidden {
+    animation: skillFlipOut $transitionDur $transitionEasing forwards;
+  }
+
+  &.is-visible {
+    animation: skillFlipIn $transitionDur $transitionEasing forwards;
+  }
+}
+
+.card__msgHeading {
+  letter-spacing: 0.025em;
+}
+
+.card__msgText {
+  text-align: center;
+  line-height: 1.6;
 }

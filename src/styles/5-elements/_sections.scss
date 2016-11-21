@@ -50,3 +50,9 @@
     clip-path: polygon(0 0, 100% 8%, 100% 108%, 0 100%);
   }
 }
+
+.sect--fluid {
+  @media screen and (max-width: $breakpoint--sm) {
+    padding: $spacing--md 0; // used to remove horizontal padding to allow elements within to span the width of the viewport
+  }
+}

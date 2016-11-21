@@ -3,11 +3,34 @@
 .modal {
   max-width: $breakpoint--sm;
   margin: 0 auto;
-  padding: $spacing--lg;
+  padding: $spacing--md;
   background: $color--white;
   border-radius: $borderRadius;
   box-shadow: 0 $spacing--sm 10px rgba(darken($color--gray, 50%), 0.2);
   overflow-y: scroll;
+
+  &.is-hidden {
+    animation: fadeOutDown $transitionDur $transitionEasing forwards;
+  }
+
+  &.is-visible {
+    animation: fadeInUp $transitionDur $transitionEasing forwards;
+  }
+}
+
+.modal__overlay {
+  position: fixed;
+  z-index: $layer--top;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 8%;
+  overflow: scroll; // prevents scrolling
+  background: rgba(0, 0, 0, 0.75);
+  transform: perspective(1000px) translateZ(30px); // used to address Safari defect with layering
+  transition: visibility ($transitionDur / 2) $transitionEasing,
+              opacity ($transitionDur / 2) $transitionEasing;
 
   &.is-hidden {
     visibility: hidden;
@@ -20,26 +43,19 @@
   }
 }
 
-.modal__overlay {
-  position: fixed;
+.modal__closeBtn {
+  @include size(20px);
+  float: right;
+  position: relative;
   z-index: $layer--top;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: $spacing--xl;
-  overflow: scroll; // prevents scrolling
-  background: rgba(0, 0, 0, 0.75);
-  transition: visibility $transitionDur $transitionEasing,
-              opacity $transitionDur $transitionEasing;
+  cursor: pointer;
+  animation: growIn $transitionDur $transitionEasing forwards;
 
-  &.is-hidden {
-    visibility: hidden;
-    opacity: 0;
+  .icon--close {
+    fill: $color--primary;
   }
 
-  &.is-displayed {
-    visibility: visible;
-    opacity: 1;
+  &:hover {
+    animation: growOut $transitionDur $transitionEasing forwards;
   }
 }

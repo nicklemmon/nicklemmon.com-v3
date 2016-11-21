@@ -1,6 +1,10 @@
 mixin portfolioModal(target)
   .modal__overlay.js-modalOverlay.is-hidden
     .modal.js-modal(data-target=target).is-hidden
+      a.modal__closeBtn.js-modalClose
+        span.u-txtHide Close the popup window
+        include ../svg/icon--close.pug
+
       if block
         block
       else

@@ -11,76 +11,86 @@ block content
 
   //- Portfolio section
   section.sect
-    .gr.gr--xs
-      .gr__col--1-2
-        h4 My Work
-        p A selection of a few designs and code snippets.
+    .gr.u-txtAlign--c
+      h4 My Work
+      p A selection of a few designs and code snippets.
 
     //- grid of portfolio items
     include partials/mixins/portfolioCard.pug
 
-    .gr.gr--xs.gr--narrowXs
-      .gr__col--1-4
-        +portfolioCard('thumb-01', 'Alt Stuff!')
-      .gr__col--1-4
-        +portfolioCard('thumb-02', 'Alt Stuff!')
-      .gr__col--1-4
-        +portfolioCard('thumb-03', 'Alt Stuff!')
-
-    .gr.gr--xs
-      .gr__col--1-4
-        +portfolioCard('thumb-05', 'Alt Stuff!')
-      .gr__col--1-4
-        +portfolioCard('thumb-06', 'Alt Stuff!')
-      .gr__col--1-4
-        +portfolioCard('thumb-07', 'Alt Stuff!')
-      .gr__col--1-4
-        +portfolioCard('thumb-08', 'Alt Stuff!')
-
-    .gr.gr--xs.gr--narrowXs
-      .gr__col--1-4
-        +portfolioCard('thumb-04', 'Alt Stuff!')
-      .gr__col--1-4
-        +portfolioCard('thumb-04', 'Alt Stuff!')
-      .gr__col--1-4
-        +portfolioCard('thumb-04', 'Alt Stuff!')
+    .card__row
+      +portfolioCard('thumb-01', 'Alt Stuff!')
+      +portfolioCard('thumb-02', 'Alt Stuff!')
+      +portfolioCard('thumb-03', 'Alt Stuff!')
+      +portfolioCard('thumb-05', 'Alt Stuff!')
+      +portfolioCard('thumb-06', 'Alt Stuff!')
+      +portfolioCard('thumb-07', 'Alt Stuff!')
+      +portfolioCard('thumb-08', 'Alt Stuff!')
+      +portfolioCard('thumb-04', 'Alt Stuff!')
+      +portfolioCard('thumb-04', 'Alt Stuff!')
+      +portfolioCard('thumb-04', 'Alt Stuff!')
+      +portfolioCard('thumb-04', 'Alt Stuff!')
 
   //- 'My Skillset' section
-  section.sect.sect--primary.sect--angle.u-slideUp.u-pdTop--xl
-    .gr.gr--xs
-      .gr__col--1-2
-        h4 My Skillset
-        p I'm a generalist with visual design and front-end development skills.
+  section.sect.sect--primary.sect--angle.u-slideUp.u-pdY--xl
+    .gr.u-pdY--lg.u-txtAlign--c
+      h4 My Skillset
+      p I'm a generalist with visual design and front-end development skills.
 
-    .gr.gr--xs
-      .gr__col--1-4
-        a.card.card--btn.card--flexCenter(tabindex="0")
-          include partials/svg/html5.pug
-      .gr__col--1-4
-        a.card.card--btn.card--flexCenter(tabindex="0")
-          include partials/svg/sass.pug
-      .gr__col--1-4
-        a.card.card--btn.card--flexCenter(tabindex="0")
-          include partials/svg/js.pug
-      .gr__col--1-4
-        a.card.card--btn.card--flexCenter(tabindex="0")
-          include partials/svg/adobe-cc.pug
+    .card__row
+      a.card.card--btn.card--flexCenter.js-skillCard(tabindex="0")
+        span.u-txtHide HTML5
+        include partials/svg/html5.pug
+        .card__msg.is-hidden
+          h5.card__msgHeading HTML5
+          p.card__msgText Writing semantic, accessible markup
 
-    .gr.gr--xs.gr--narrowXs
-      .gr__col--1-4
-        a.card.card--btn.card--flexCenter(tabindex="0")
-          include partials/svg/sketch.pug
-      .gr__col--1-4
-        a.card.card--btn.card--flexCenter(tabindex="0")
-          include partials/svg/terminal.pug
-      .gr__col--1-4
-        a.card.card--btn.card--flexCenter(tabindex="0")
-          include partials/svg/handlebars.pug
+      a.card.card--btn.card--flexCenter.js-skillCard(tabindex="0")
+        span.u-txtHide Sass
+        include partials/svg/sass.pug
+        .card__msg.is-hidden
+          h5.card__msgHeading Sass
+          p.card__msgText Using modular, and easy to maintain coding patterns
+
+      a.card.card--btn.card--flexCenter.js-skillCard(tabindex="0")
+        span.u-txtHide JavaScript
+        include partials/svg/js.pug
+        .card__msg.is-hidden
+          h5.card__msgHeading JavaScript
+          p.card__msgText Taking an object-oriented approach
+
+      a.card.card--btn.card--flexCenter.js-skillCard(tabindex="0")
+        span.u-txtHide Creative Cloud
+        include partials/svg/adobe-cc.pug
+        .card__msg.is-hidden
+          h5.card__msgHeading Creative Cloud
+          p.card__msgText Illustrator and Photoshop, mostly!
+
+      a.card.card--btn.card--flexCenter.js-skillCard(tabindex="0")
+        span.u-txtHide Sketch
+        include partials/svg/sketch.pug
+        .card__msg.is-hidden
+          h5.card__msgHeading Sketch
+          p.card__msgText Protoyping and designing using a newer tool
+
+      a.card.card--btn.card--flexCenter.js-skillCard(tabindex="0")
+        span.u-txtHide Terminal
+        include partials/svg/terminal.pug
+        .card__msg.is-hidden
+          h5.card__msgHeading Terminal
+          p.card__msgText Largely for running build tools and troubleshooting
+
+      a.card.card--btn.card--flexCenter.js-skillCard(tabindex="0")
+        span.u-txtHide Handlebars
+        include partials/svg/handlebars.pug
+        .card__msg.is-hidden
+          h5.card__msgHeading Handlebars
+          p.card__msgText Using templating to write more efficient markup
 
   //- 'About Me' section
   section.sect
     .gr.gr--xs.u-pdY--lg
-      .gr__col--1-3
+      .gr__col--1-3.u-display--flex.u-jstContent--center
         picture.avatar
           img.avatar__img(src="/images/me.webp", alt="Me!")
       .gr__col--2-3
@@ -91,12 +101,12 @@ block content
 
 
   //- 'Contact' section
-  section.sect.sect--secondary.u-mgTop--xl
-    .gr.card.card--fluid.u-slideUp.u-pdTop--lg.u-pdBottom--md
+  section.sect.sect--secondary.sect--fluid.u-mgTop--xl.u-pdBottom--xl
+    .gr.card.card--fluid.u-slideUp.u-pdY--lg.u-pdBottom--md
       h4 Send a message
       p Send me your name and email address and I'll get back with you shortly. I won't share your information with anyone.
 
-      form.form.u-mgTop--lg
+      form.form.u-mgTop--md
         .gr.gr--xs
           fieldset.gr__col--1-2.form__fieldset
             input.form__input(id="first-name", name="first-name", type="text", placeholder="First Name", required)
