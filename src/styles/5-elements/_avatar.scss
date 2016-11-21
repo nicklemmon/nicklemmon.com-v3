@@ -4,10 +4,6 @@
   width: auto;
   border-radius: 50%;
   border: 2px solid $color--white;
-
-  @media screen and (min-width: $breakpoint--xs) {
-    float: right;
-  }
 }
 
 .avatar__img {
