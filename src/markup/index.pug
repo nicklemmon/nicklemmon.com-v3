@@ -11,10 +11,9 @@ block content
 
   //- Portfolio section
   section.sect
-    .gr.gr--xs
-      .gr__col--1-2
-        h4 My Work
-        p A selection of a few designs and code snippets.
+    .gr.u-txtAlign--c
+      h4 My Work
+      p A selection of a few designs and code snippets.
 
     //- grid of portfolio items
     include partials/mixins/portfolioCard.pug
@@ -33,11 +32,10 @@ block content
       +portfolioCard('thumb-04', 'Alt Stuff!')
 
   //- 'My Skillset' section
-  section.sect.sect--primary.sect--angle.u-slideUp.u-pdTop--xl
-    .gr.gr--xs
-      .gr__col--1-2
-        h4 My Skillset
-        p I'm a generalist with visual design and front-end development skills.
+  section.sect.sect--primary.sect--angle.u-slideUp.u-pdY--xl
+    .gr.u-txtAlign--c
+      h4 My Skillset
+      p I'm a generalist with visual design and front-end development skills.
 
     .card__row
       a.card.card--btn.card--flexCenter.js-skillCard(tabindex="0")
