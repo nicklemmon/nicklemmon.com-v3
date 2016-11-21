@@ -7,7 +7,6 @@
   background: $color--white;
   border-radius: $borderRadius;
   box-shadow: 0 $spacing--sm 10px rgba(darken($color--gray, 50%), 0.2);
-  overflow-y: scroll;
 
   &.is-hidden {
     animation: fadeOutDown $transitionDur $transitionEasing forwards;
