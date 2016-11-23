@@ -71,6 +71,14 @@
 
 
 //== Border utility classes to define border colors on a case-by-case basis
+.u-border--base {
+  border-color: $color--base;
+}
+
+.u-border--white {
+  border-color: $color--white;
+}
+
 .u-border--primary {
   border-color: $color--primary;
 }
