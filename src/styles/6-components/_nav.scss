@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   position: relative;
   z-index: $layer--mid; // allows shadow to overlap section below
   padding: $spacing--sm $spacing--md;
@@ -23,13 +23,13 @@
 
 .nav__menuBtn {
   padding: 0.75rem $spacing--sm;
-  border: 2px solid rgba(0, 0, 0, 0);
+  border: 2px solid $color--white;
   border-radius: $borderRadius;
   transition: border $transitionDur $transitionEasing;
 
   &:hover,
   &:focus,
   &:active {
-    border: 2px solid $color--white;
+    border: 2px solid $color--secondary;
   }
 }
