@@ -58,3 +58,15 @@
     animation: growOut $transitionDur $transitionEasing forwards;
   }
 }
+
+.modal__closeText {
+  display: inline-block;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: $color--primary;
+  animation: growIn $transitionDur $transitionEasing forwards;
+
+  &:hover {
+    animation: growOut $transitionDur $transitionEasing forwards;
+  }
+}
