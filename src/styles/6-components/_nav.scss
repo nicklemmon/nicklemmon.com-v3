@@ -22,14 +22,19 @@
 }
 
 .nav__menuBtn {
+  @include boxShadow(8px);
   padding: 0.75rem $spacing--sm;
+  font-weight: 300;
+  letter-spacing: 0.06rem;
+  text-shadow: 0 0.1rem 10px $color--primaryDark;
   border: 2px solid $color--white;
   border-radius: $borderRadius;
-  transition: border $transitionDur $transitionEasing;
+  transition: background $transitionDur $transitionEasing;
+  background: rgba(0, 0, 0, 0);
 
   &:hover,
   &:focus,
   &:active {
-    border: 2px solid $color--secondary;
+    background: rgba($color--primaryDark, 0.25);
   }
 }
