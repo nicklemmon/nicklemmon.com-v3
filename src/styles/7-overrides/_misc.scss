@@ -68,3 +68,21 @@
 .u-slideUp { // used to apply negative top margin to allow previous content to visually overlap
   margin-top: -$spacing--lg * 2.5;
 }
+
+
+//== Border utility classes to define border colors on a case-by-case basis
+.u-border--base {
+  border-color: $color--base;
+}
+
+.u-border--white {
+  border-color: $color--white;
+}
+
+.u-border--primary {
+  border-color: $color--primary;
+}
+
+.u-border--secondary {
+  border-color: $color--secondary;
+}

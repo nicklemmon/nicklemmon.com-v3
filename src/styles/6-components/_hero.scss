@@ -9,7 +9,7 @@
   text-align: center;
 
   @media screen and (min-width: $breakpoint--sm) {
-    padding: ($spacing--xl * 2) $spacing--md;
+    padding: ($spacing--lg * 4) $spacing--md ($spacing--lg * 3);
   }
 }
 

@@ -11,6 +11,15 @@
       rgba($color--primary, 0.9),
       rgba($color--primary, 0.9)
     ),
+    url('/images/nc-mountains.png');
+}
+
+.webp .sect--primary { // makes use of modernizr by detecing .webp support
+  background:
+    linear-gradient(
+      rgba($color--primary, 0.9),
+      rgba($color--primary, 0.9)
+    ),
     url('/images/nc-mountains.webp');
 }
 
@@ -20,11 +29,20 @@
       rgba($color--secondary, 0.9),
       rgba($color--secondary, 0.9)
     ),
+    url('/images/nc-mountains.png');
+}
+
+.webp .section--secondary { // makes use of modernizr by detecing .webp support
+  background:
+    linear-gradient(
+      rgba($color--secondary, 0.9),
+      rgba($color--secondary, 0.9)
+    ),
     url('/images/nc-mountains.webp');
 }
 
-.sect--primary,
-.sect--secondary {
+.sect--primary.sect--primary,
+.sect--secondary.sect--secondary {
   color: $color--white;
   background-size: cover;
   position: relative;

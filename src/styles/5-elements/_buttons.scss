@@ -13,6 +13,7 @@
   border-radius: $borderRadius;
   cursor: pointer;
   color: $color--white;
+  text-decoration: none;
   transition: background $transitionDur $transitionEasing;
 
   @media screen and (min-width: $breakpoint--md) {
@@ -43,6 +44,7 @@
 
 .btn__txt {
   position: relative;
+  margin: 0 auto; // seems unnecessary, but fixes issue with -webkit mobile browsers not rendering flex properties properly
   z-index: $layer--mid;
   text-shadow: 0 0.1rem 5px rgba(#000, 0.1);
 }
@@ -80,7 +82,7 @@
 }
 
 
-.btn--small-full { // goes full width on smaller screen sizes
+.btn--smallFull { // goes full width on smaller screen sizes
   @media screen and (max-width: $breakpoint--xs) {
     width: 100%;
   }

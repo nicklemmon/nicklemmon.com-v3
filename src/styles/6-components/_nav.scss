@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   position: relative;
   z-index: $layer--mid; // allows shadow to overlap section below
   padding: $spacing--sm $spacing--md;
@@ -22,14 +22,19 @@
 }
 
 .nav__menuBtn {
+  @include boxShadow(8px);
   padding: 0.75rem $spacing--sm;
-  border: 2px solid rgba(0, 0, 0, 0);
+  font-weight: 300;
+  letter-spacing: 0.06rem;
+  text-shadow: 0 0.1rem 10px $color--primaryDark;
+  border: 2px solid $color--white;
   border-radius: $borderRadius;
-  transition: border $transitionDur $transitionEasing;
+  transition: background $transitionDur $transitionEasing;
+  background: rgba(0, 0, 0, 0);
 
   &:hover,
   &:focus,
   &:active {
-    border: 2px solid $color--white;
+    background: rgba($color--primaryDark, 0.25);
   }
 }

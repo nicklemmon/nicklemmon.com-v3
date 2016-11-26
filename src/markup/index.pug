@@ -6,19 +6,20 @@ block content
     h1.tagline.tagline--h1.u-mgTop--xl Front-end Web&nbsp;Design
     .hero__taglineContainer
       h2.tagline.tagline--h2 in Durham, NC
-    a.btn.btn--secondary(tabindex="0")
+    a.btn.btn--secondary(href="#portfolio", tabindex="0")
       span.btn__txt See My Stuff!
 
   //- Portfolio section
   section.sect
     .gr.u-txtAlign--c
       h4 My Work
+      hr.u-mgX--auto.u-border--base
       p A selection of a few designs and code snippets.
 
     //- grid of portfolio items
     include partials/mixins/portfolioCard.pug
 
-    .card__row
+    .card__row#portfolio
       +portfolioCard('thumb-01', 'Alt Stuff!')
       +portfolioCard('thumb-02', 'Alt Stuff!')
       +portfolioCard('thumb-03', 'Alt Stuff!')
@@ -35,6 +36,7 @@ block content
   section.sect.sect--primary.sect--angle.u-slideUp.u-pdY--xl
     .gr.u-pdY--lg.u-txtAlign--c
       h4 My Skillset
+      hr.u-mgX--auto.u-border--white
       p I'm a generalist with visual design and front-end development skills.
 
     .card__row
@@ -92,21 +94,24 @@ block content
     .gr.gr--xs.u-pdY--lg
       .gr__col--1-3.u-display--flex.u-jstContent--center.u-mgRight--0
         picture.avatar
-          img.avatar__img(src="/images/me.webp", alt="Me!")
+          source.avatar__img(srcset="../images/me.webp", type="image/webp")
+          img.avatar__img(src="../images/me.jpg", alt="Me!")
       .gr__col--2-3
         h4 About Me
+        hr.u-border--base
         .paragraph--paddingCol
           p I’m currently working for the BB&amp;T Digital Channel, doing visual design and front-end web development.
           p To see more work, find me elsewhere on the interwebs. You can always send me a message as well.
 
 
   //- 'Contact' section
-  section.sect.sect--secondary.sect--fluid.u-mgTop--xl.u-pdBottom--xl
+  section.sect.sect--secondary.sect--fluid.u-mgTop--lg.u-pdBottom--xl
     .gr.card.card--fluid.u-slideUp.u-pdY--lg.u-pdBottom--md
       h4 Send a message
+      hr.u-border--base
       p Send me your name and email address and I'll get back with you shortly. I won't share your information with anyone.
 
-      form.form.u-mgTop--md
+      form.form.u-mgTop--lg
         .gr.gr--xs
           fieldset.gr__col--1-2.form__fieldset
             input.form__input(id="first-name", name="first-name", type="text", placeholder="First Name", required)
@@ -120,7 +125,7 @@ block content
           input.form__input(id="email-address", name="email-address", type="text", placeholder="Email Address", required)
           label.form__label(for="email-address") Email Address
 
-        button.btn.btn--primary.btn--small-full.u-mgTop--md(type="submit", method="post")
+        button.btn.btn--primary.btn--smallFull.u-mgTop--lg(type="submit", method="post")
           span.btn__txt Send
 
   //- Modals/lightboxes used to display portfolio content
