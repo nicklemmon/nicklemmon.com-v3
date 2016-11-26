@@ -6,7 +6,7 @@ block content
     h1.tagline.tagline--h1.u-mgTop--xl Front-end Web&nbsp;Design
     .hero__taglineContainer
       h2.tagline.tagline--h2 in Durham, NC
-    a.btn.btn--secondary(tabindex="0")
+    a.btn.btn--secondary(href="#portfolio", tabindex="0")
       span.btn__txt See My Stuff!
 
   //- Portfolio section
@@ -19,7 +19,7 @@ block content
     //- grid of portfolio items
     include partials/mixins/portfolioCard.pug
 
-    .card__row
+    .card__row#portfolio
       +portfolioCard('thumb-01', 'Alt Stuff!')
       +portfolioCard('thumb-02', 'Alt Stuff!')
       +portfolioCard('thumb-03', 'Alt Stuff!')
