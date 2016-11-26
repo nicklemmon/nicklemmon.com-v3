@@ -13,6 +13,7 @@
   border-radius: $borderRadius;
   cursor: pointer;
   color: $color--white;
+  text-decoration: none;
   transition: background $transitionDur $transitionEasing;
 
   @media screen and (min-width: $breakpoint--md) {
