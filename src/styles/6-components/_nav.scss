@@ -38,3 +38,50 @@
     background: rgba($color--primaryDark, 0.25);
   }
 }
+
+.nav__menu {
+  @include boxShadow($spacing--xl);
+  background: $color--white;
+  position: absolute;
+  top: 0;
+  margin: 0 $spacing--md;
+  padding: $spacing--md;
+  border: 1px solid $color--base;
+  width: 100%;
+
+  @media screen and (min-width: $breakpoint--sm) {
+    width: 25%;
+    margin: 0;
+    top: $spacing--sm;
+    right: $spacing--sm;
+    border-radius: $borderRadius;
+  }
+}
+
+.nav__menuLink {
+  display: block;
+  color: $color--primary;
+  cursor: pointer;
+  padding: $spacing--sm;
+  transition: color $transitionDur $transitionEasing;
+
+  &:hover {
+    color: $color--primaryDark;
+  }
+}
+
+.nav__closeBtn {
+  @include size(25px);
+  float: right;
+  display: block;
+  cursor: pointer;
+  animation: growIn $transitionDur $transitionEasing forwards;
+
+  .icon--close {
+    fill: $color--secondary;
+  }
+
+  &:hover {
+    animation: growOut $transitionDur $transitionEasing forwards;
+  }
+}

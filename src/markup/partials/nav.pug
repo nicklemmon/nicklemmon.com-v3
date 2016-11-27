@@ -1,3 +1,18 @@
 nav.nav
-  //- a.nav__brand(href="/index.html") Nick Lemmon
-  a.nav__menuBtn(href="#") Menu
+  //- a.nav__brand(href="/index.html") Nick Lemmon - commented out
+  a.nav__menuBtn.js-menuBtn Menu
+
+  .nav__menu.js-menu.is-collapsed
+    a.nav__closeBtn.js-menuBtn
+      span.u-txtHide Close the menu
+      include svg/icon--close.pug
+
+    ul.nav__menuList
+      li.nav__menuListItem
+        a.nav__menuLink My Work
+      li.nav__menuListItem
+        a.nav__menuLink My Skillset
+      li.nav__menuListItem
+        a.nav__menuLink About Me
+      li.nav__menuListItem
+        a.nav__menuLink Send a Message
