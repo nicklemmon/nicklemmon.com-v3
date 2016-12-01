@@ -29,13 +29,14 @@
   text-shadow: 0 0.1rem 10px $color--primaryDark;
   border: 2px solid $color--white;
   border-radius: $borderRadius;
-  transition: background $transitionDur $transitionEasing;
+  transition: background ($transitionDur * 1.5) $transitionEasing;
+  cursor: pointer;
   background: rgba(0, 0, 0, 0);
 
   &:hover,
   &:focus,
   &:active {
-    background: rgba($color--primaryDark, 0.25);
+    background: rgba($color--primaryDark, 0.35);
   }
 }
 
@@ -43,30 +44,61 @@
   @include boxShadow($spacing--xl);
   background: $color--white;
   position: absolute;
-  top: 0;
-  margin: 0 $spacing--md;
   padding: $spacing--md;
   border: 1px solid $color--base;
-  width: 100%;
+  width: auto;
+  top: $spacing--sm;
+  left: $spacing--sm;
+  right: $spacing--sm;
+  border-radius: $borderRadius;
+  transform-origin: 100% 0%;
+  transition: opacity ($transitionDur / 2) $transitionEasing,
+              transform ($transitionDur * 4) $transitionEasing;
 
   @media screen and (min-width: $breakpoint--sm) {
+    left: initial;
     width: 25%;
-    margin: 0;
-    top: $spacing--sm;
-    right: $spacing--sm;
-    border-radius: $borderRadius;
+  }
+
+  &.is-collapsed {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  &.is-expanded {
+    animation: slideOut $transitionDur $transitionEasing;
   }
 }
 
 .nav__menuLink {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   color: $color--primary;
   cursor: pointer;
   padding: $spacing--sm;
   transition: color $transitionDur $transitionEasing;
+  text-align: center;
 
-  &:hover {
+  .icon { // NESTING!! OH NO!
+    @include size(20px);
+    margin: 0 ($spacing--sm / 2) 2px 0; // kind of hacky 2px adjustment to help with alignment issues
+    fill: $color--primary;
+    transition: fill $transitionDur $transitionEasing;
+  }
+
+  &:hover,
+  &:focus {
     color: $color--primaryDark;
+
+    .icon:not(.icon--close) {
+      fill: $color--primaryDark;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint--sm) {
+    text-align: left;
   }
 }
 
