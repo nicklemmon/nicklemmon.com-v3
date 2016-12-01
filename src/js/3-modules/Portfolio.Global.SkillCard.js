@@ -17,7 +17,7 @@ Portfolio.Global.SkillCard = {
     this.$skillCard.on('click keypress', function(e) {
       e.preventDefault();
 
-      if ( e.which === 13 || e.type === 'click' ) {
+      if (e.which === 13 || e.type === 'click') {
         Portfolio.Global.SkillCard.toggleMsg( $(this) );
       }
     });
