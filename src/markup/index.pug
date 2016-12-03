@@ -32,6 +32,19 @@ block content
       +portfolioCard('thumb-04', 'Alt Stuff!')
       +portfolioCard('thumb-04', 'Alt Stuff!')
 
+    //- Modals/lightboxes used to display portfolio content
+    include partials/mixins/portfolioModal.pug
+
+    +portfolioModal('thumb-01')
+    +portfolioModal('thumb-02')
+    +portfolioModal('thumb-03')
+    +portfolioModal('thumb-04')
+    +portfolioModal('thumb-05')
+    +portfolioModal('thumb-06')
+    +portfolioModal('thumb-07')
+    +portfolioModal('thumb-08')
+    +portfolioModal('thumb-09')
+
   //- 'My Skillset' section
   section.sect.sect--primary.sect--angle.u-slideUp.u-pdY--xl#skillset
     .gr.u-pdY--lg.u-txtAlign--c
@@ -127,16 +140,3 @@ block content
 
         button.btn.btn--primary.btn--smallFull.u-mgTop--lg(type="submit", method="post")
           span.btn__txt Send
-
-  //- Modals/lightboxes used to display portfolio content
-  include partials/mixins/portfolioModal.pug
-
-  +portfolioModal('thumb-01')
-  +portfolioModal('thumb-02')
-  +portfolioModal('thumb-03')
-  +portfolioModal('thumb-04')
-  +portfolioModal('thumb-05')
-  +portfolioModal('thumb-06')
-  +portfolioModal('thumb-07')
-  +portfolioModal('thumb-08')
-  +portfolioModal('thumb-09')
