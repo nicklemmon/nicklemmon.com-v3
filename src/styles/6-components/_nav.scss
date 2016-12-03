@@ -14,7 +14,6 @@
 .nav__menuBtn,
 .nav__brand {
   color: $color--white;
-  text-decoration: none;
 }
 
 .nav__brand {
@@ -24,8 +23,6 @@
 .nav__menuBtn {
   @include boxShadow(8px);
   padding: 0.75rem $spacing--sm;
-  font-weight: 300;
-  letter-spacing: 0.06rem;
   text-shadow: 0 0.1rem 10px $color--primaryDark;
   border: 2px solid $color--white;
   border-radius: $borderRadius;
@@ -80,6 +77,7 @@
   padding: $spacing--sm;
   transition: color $transitionDur $transitionEasing;
   text-align: center;
+  text-decoration: none;
 
   .icon { // NESTING!! OH NO!
     @include size(20px);
