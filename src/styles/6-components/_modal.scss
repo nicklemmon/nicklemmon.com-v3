@@ -64,9 +64,9 @@
   font-size: 0.8rem;
   cursor: pointer;
   color: $color--primary;
-  animation: growIn $transitionDur $transitionEasing forwards;
+  transition: color $transitionDur $transitionEasing;
 
   &:hover {
-    animation: growOut $transitionDur $transitionEasing forwards;
+    color: $color--primaryDark;
   }
 }
