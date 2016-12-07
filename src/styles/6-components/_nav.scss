@@ -35,6 +35,10 @@
   &:active {
     background: rgba($color--primaryDark, 0.35);
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .nav__menu {
@@ -88,11 +92,15 @@
 
   &:hover,
   &:focus {
-    color: $color--primaryDark;
+    color: scale-color($color--primaryDark, $lightness: -10%);
 
     .icon:not(.icon--close) {
       fill: $color--primaryDark;
     }
+  }
+
+  &:focus {
+    outline: none;
   }
 
   @media screen and (min-width: $breakpoint--sm) {
@@ -102,7 +110,9 @@
 
 .nav__closeBtn {
   @include size(25px);
-  float: right;
+  position: absolute;
+  top: $spacing--sm;
+  right: $spacing--sm;
   display: block;
   cursor: pointer;
   animation: growIn $transitionDur $transitionEasing forwards;
@@ -111,7 +121,12 @@
     fill: $color--secondary;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     animation: growOut $transitionDur $transitionEasing forwards;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
