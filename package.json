@@ -24,6 +24,7 @@
     "gulp-swig": "^0.8.0",
     "gulp-uglify": "^2.0.0",
     "gulp-webp": "^2.3.0",
+    "run-sequence": "^1.2.2",
     "snapsvg-cjs": "0.0.4"
   }
 }

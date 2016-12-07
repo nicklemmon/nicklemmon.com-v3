@@ -4,20 +4,21 @@
 //== Requiring things ==//
 //////////////////////////
 
-var gulp = require('gulp');
-var clean = require('gulp-clean');
-var swig = require('gulp-swig');
-var data = require('gulp-data');
-var pug = require('gulp-pug');
-var sass = require('gulp-sass');
-var globSass = require('gulp-sass-glob');
-var autoprefixer = require('gulp-autoprefixer');
-var uglify = require('gulp-uglify');
-var concatJS = require('gulp-concat');
-var imageMin = require('gulp-imagemin');
-var webP = require('gulp-webp');
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
+var gulp = require('gulp'),
+    runSequence = require('run-sequence'),
+    clean = require('gulp-clean'),
+    swig = require('gulp-swig'),
+    data = require('gulp-data'),
+    pug = require('gulp-pug'),
+    sass = require('gulp-sass'),
+    globSass = require('gulp-sass-glob'),
+    autoprefixer = require('gulp-autoprefixer'),
+    uglify = require('gulp-uglify'),
+    concatJS = require('gulp-concat'),
+    imageMin = require('gulp-imagemin'),
+    webP = require('gulp-webp'),
+    browserSync = require('browser-sync'),
+    reload = browserSync.reload;
 
 //////////////////////////
 //== Global variables ==//
@@ -121,12 +122,8 @@ gulp.task('images', ['imageMin', 'webP'])
 ///////////////////////////////////////
 
 // Default task
-gulp.task('default', ['clean'], function() {
-  gulp.run('markup');
-  gulp.run('styles');
-  gulp.run('scripts');
-  gulp.run('images');
-  gulp.run('watch');
+gulp.task('default', function(cb) {
+  return runSequence('clean', 'markup', 'styles', 'scripts', 'images', 'watch');
 })
 
 // Watch task
