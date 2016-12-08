@@ -23,6 +23,7 @@ block content
       +portfolioCard('01', 'Alt Stuff!')
       +portfolioCard('02', 'Alt Stuff!')
       +portfolioCard('03', 'Alt Stuff!')
+      +portfolioCard('04', 'Alt Stuff!')
       +portfolioCard('05', 'Alt Stuff!')
       +portfolioCard('06', 'Alt Stuff!')
       +portfolioCard('07', 'Alt Stuff!')
@@ -30,23 +31,70 @@ block content
       +portfolioCard('09', 'Alt Stuff!')
       +portfolioCard('10', 'Alt Stuff!')
       +portfolioCard('11', 'Alt Stuff!')
-      +portfolioCard('12', 'Alt Stuff!')
 
     //- Modals/lightboxes used to display portfolio content
     include partials/mixins/portfolioModal.pug
+    //- Modal images mixin
+    include partials/mixins/portfolioImage.pug
 
-    +portfolioModal('01')
-    +portfolioModal('02')
-    +portfolioModal('03')
-    +portfolioModal('04')
-    +portfolioModal('05')
-    +portfolioModal('06')
-    +portfolioModal('07')
-    +portfolioModal('08')
-    +portfolioModal('09')
-    +portfolioModal('10')
-    +portfolioModal('11')
-    +portfolioModal('12')
+    //- For the modal, pass in the item number AKA the directory number
+    //- For each image, pass in the same item number and
+    +portfolioModal('01', 'A Title', "A logo for a friend's strength training business.")
+      +portfolioImage('01', '1', 'Alt Text Again!')
+      +portfolioImage('01', '2', 'Alt Text Again!')
+      +portfolioImage('01', '3', 'Alt Text Again!')
+
+    +portfolioModal('02', 'Toggling Mobile Menu', 'Toggling mobile menu concept that simulates sliding in sync with the button itself.')
+      +portfolioImage('02', '1', 'Alt Text Again!')
+      a.btn.btn--primary(href="http://codepen.io/nicklemmon/pen/Krxdvv")
+        span.btn__txt Codepen
+
+    +portfolioModal('03', 'A Title')
+      +portfolioImage('03', '1', 'Alt Text Again!')
+
+    +portfolioModal('04', 'A Title')
+      +portfolioImage('04', '1', 'Alt Text Again!')
+      +portfolioImage('04', '2', 'Alt Text Again!')
+      +portfolioImage('04', '3', 'Alt Text Again!')
+      +portfolioImage('04', '4', 'Alt Text Again!')
+      +portfolioImage('04', '5', 'Alt Text Again!')
+      +portfolioImage('04', '6', 'Alt Text Again!')
+      +portfolioImage('04', '7', 'Alt Text Again!')
+
+    +portfolioModal('05', 'A Title')
+      +portfolioImage('05', '1', 'Alt Text Again!')
+      +portfolioImage('05', '2', 'Alt Text Again!')
+      +portfolioImage('05', '3', 'Alt Text Again!')
+
+    +portfolioModal('06', 'A Title')
+      +portfolioImage('06', '1', 'Alt Text Again!')
+
+    +portfolioModal('07', 'A Title')
+      +portfolioImage('07', '1', 'Alt Text Again!')
+      +portfolioImage('07', '2', 'Alt Text Again!')
+      +portfolioImage('07', '3', 'Alt Text Again!')
+      +portfolioImage('07', '4', 'Alt Text Again!')
+      +portfolioImage('07', '5', 'Alt Text Again!')
+      +portfolioImage('07', '6', 'Alt Text Again!')
+
+    +portfolioModal('08', 'A Title')
+      +portfolioImage('08', '1', 'Alt Text Again!')
+
+    +portfolioModal('09', 'A Title')
+      +portfolioImage('09', '1', 'Alt Text Again!')
+      +portfolioImage('09', '2', 'Alt Text Again!')
+      +portfolioImage('09', '3', 'Alt Text Again!')
+
+    +portfolioModal('10', 'A Title')
+      +portfolioImage('10', '1', 'Alt Text Again!')
+
+    +portfolioModal('11', 'A Title')
+      +portfolioImage('11', '1', 'Alt Text Again!')
+      +portfolioImage('11', '2', 'Alt Text Again!')
+      +portfolioImage('11', '3', 'Alt Text Again!')
+      +portfolioImage('11', '4', 'Alt Text Again!')
+      +portfolioImage('11', '5', 'Alt Text Again!')
+      +portfolioImage('11', '6', 'Alt Text Again!')
 
   //- 'My Skillset' section
   section.sect.sect--primary.sect--angle.u-slideUp.u-pdY--xl#skillset
