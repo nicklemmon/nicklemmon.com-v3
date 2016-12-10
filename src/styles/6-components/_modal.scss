@@ -47,10 +47,10 @@
 }
 
 .modal__header {
-  padding: $spacing--xs;
+  padding: $spacing--sm $spacing--xs;
 
   @media screen and (min-width: $breakpoint--sm) {
-    padding: $spacing--sm;
+    padding: $spacing--md $spacing--sm;
   }
 }
 
