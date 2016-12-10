@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   padding: $spacing--sm $spacing--md;
+  max-height: 50px;
   font-family: $fontStack--secondary;
   font-size: 1rem;
   letter-spacing: 0.1rem;
@@ -43,6 +44,7 @@
 }
 
 .btn__txt {
+  line-height: 1; // helps with vertical centering issues
   position: relative;
   margin: 0 auto; // seems unnecessary, but fixes issue with -webkit mobile browsers not rendering flex properties properly
   z-index: $layer--mid;
@@ -85,5 +87,16 @@
 .btn--smallFull { // goes full width on smaller screen sizes
   @media screen and (max-width: $breakpoint--xs) {
     width: 100%;
+  }
+}
+
+.btn__iconContainer {
+  fill: $color--white;
+
+  .icon {
+    position: relative;
+    z-index: $layer--mid;
+    @include size($spacing--md);
+    margin-right: $spacing--sm / 2;
   }
 }

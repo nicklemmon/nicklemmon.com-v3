@@ -5,6 +5,8 @@ $color--base: #141B40;
   $color--baseDark: scale-color($color--base, $lightness: -20%);
 $color--white: #FFF;
 $color--gray: #636363;
+  $color--grayLight: lighten($color--gray, 50%);
+  $color--grayDark: darken($color--gray, 50%);
 $color--primary: #4B66E8;
   $color--primaryDark: scale-color($color--primary, $lightness: -20%);
   $color--primaryLight: scale-color($color--primary, $lightness: 20%);

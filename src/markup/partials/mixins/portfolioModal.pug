@@ -5,10 +5,11 @@ mixin portfolioModal(target, title, description)
         span.u-txtHide Close the popup window
         include ../svg/icon--close.pug
 
-      div.u-txtAlign--c
+      div.modal__header.u-txtAlign--c
         h5.modal__heading #{title}
-        p.u-mgBottom--md.u-mgX--auto.u-maxWidth--xs #{description}
+        p.u-mgX--auto.u-maxWidth--xs #{description}
 
+      div.modal__contentContainer.u-txtAlign--c
         if block
           block
         else
