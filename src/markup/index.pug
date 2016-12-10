@@ -2,7 +2,7 @@ extends layouts/default.pug
 
 block content
 
-  section.sect.sect--primary.sect--angle.hero
+  section.sect.sect--primary.sect--angle.hero#top
     h1.tagline.tagline--h1.u-mgTop--xl Front-end Web&nbsp;Design
     .hero__taglineContainer
       h2.tagline.tagline--h2 in Durham, NC
@@ -20,30 +20,89 @@ block content
     include partials/mixins/portfolioCard.pug
 
     .card__row
-      +portfolioCard('thumb-01', 'Alt Stuff!')
-      +portfolioCard('thumb-02', 'Alt Stuff!')
-      +portfolioCard('thumb-03', 'Alt Stuff!')
-      +portfolioCard('thumb-05', 'Alt Stuff!')
-      +portfolioCard('thumb-06', 'Alt Stuff!')
-      +portfolioCard('thumb-07', 'Alt Stuff!')
-      +portfolioCard('thumb-08', 'Alt Stuff!')
-      +portfolioCard('thumb-04', 'Alt Stuff!')
-      +portfolioCard('thumb-04', 'Alt Stuff!')
-      +portfolioCard('thumb-04', 'Alt Stuff!')
-      +portfolioCard('thumb-04', 'Alt Stuff!')
+      +portfolioCard('01', 'Alt Stuff!')
+      +portfolioCard('02', 'Alt Stuff!')
+      +portfolioCard('03', 'Alt Stuff!')
+      +portfolioCard('04', 'Alt Stuff!')
+      +portfolioCard('05', 'Alt Stuff!')
+      +portfolioCard('06', 'Alt Stuff!')
+      +portfolioCard('07', 'Alt Stuff!')
+      +portfolioCard('08', 'Alt Stuff!')
+      +portfolioCard('09', 'Alt Stuff!')
+      +portfolioCard('10', 'Alt Stuff!')
+      +portfolioCard('11', 'Alt Stuff!')
 
     //- Modals/lightboxes used to display portfolio content
     include partials/mixins/portfolioModal.pug
+    //- Modal images mixin
+    include partials/mixins/portfolioImage.pug
 
-    +portfolioModal('thumb-01')
-    +portfolioModal('thumb-02')
-    +portfolioModal('thumb-03')
-    +portfolioModal('thumb-04')
-    +portfolioModal('thumb-05')
-    +portfolioModal('thumb-06')
-    +portfolioModal('thumb-07')
-    +portfolioModal('thumb-08')
-    +portfolioModal('thumb-09')
+    //- For the modal, pass in the item number AKA the directory number
+    //- For each image, pass in the same item number and
+    +portfolioModal('01', 'Strength & Sport', "A logo for a friend's strength training business.")
+      +portfolioImage('01', '1', 'Strength and Sport Logo and Illustration')
+
+    +portfolioModal('02', 'Toggling Mobile Menu', 'Toggling mobile menu concept that simulates sliding in sync with the button itself.')
+      +portfolioImage('02', '1', 'Screenshot of the Toggling Mobile Menu')
+      a.btn.btn--secondary.u-mgTop--sm(target="_blank", href="http://codepen.io/nicklemmon/pen/Krxdvv")
+        span.btn__iconContainer
+          include partials/svg/icon--codepen.pug
+        span.btn__txt Go to Codepen
+
+    +portfolioModal('03', 'Toggling Switch', 'A toggling switch with keyframe animation.')
+      +portfolioImage('03', '1', 'Screenshot of the Toggling Switch')
+      a.btn.btn--secondary.u-mgTop--sm(target="_blank", href="http://codepen.io/nicklemmon/pen/ZQqoON")
+        span.btn__iconContainer
+          include partials/svg/icon--codepen.pug
+        span.btn__txt Go to Codepen
+
+    +portfolioModal('04', 'Sketchbook Illustrations', 'Various drawings in notebooks and sketchbooks over the last few years.')
+      +portfolioImage('04', '1', 'Illustration of a dragon')
+      +portfolioImage('04', '2', 'Illustration of a robot and a few other characters')
+      +portfolioImage('04', '3', 'Illustration of a monster face')
+      +portfolioImage('04', '4', 'Another illustration of a monster face')
+      +portfolioImage('04', '5', 'Yet another monster face!')
+      +portfolioImage('04', '6', 'Illustration of a robot')
+      +portfolioImage('04', '7', 'Illustration of a tentacled eyeball!')
+
+    +portfolioModal('05', 'Rent Otter', 'A responsive Bootstrap site for a fictional VIP rental company.')
+      +portfolioImage('05', '1', 'Rent Otter logo treatments')
+      +portfolioImage('05', '2', 'The home page on a wide screen size')
+      +portfolioImage('05', '3', 'The site on a mobile device')
+
+    +portfolioModal('06', 'UNC CTI Project Infographic', 'Infographic describing outcomes for the UNC Critical Time Intervention homelessness outreach program.')
+      +portfolioImage('06', '1', 'Infographic describing UNC CTI project outcomes')
+
+    +portfolioModal('07', 'XDSinc.org Web Design and Development', 'Web design and front-end development for Cross Disability Services (XDS), a nonprofit in North Carolina serving individuals with disabilities.')
+      +portfolioImage('07', '1', 'Screenshot of the landing page on a wide screen')
+      +portfolioImage('07', '2', 'Screenshot of the donation page on a wide screen')
+      +portfolioImage('07', '3', 'Screenshot of the donation page on a narrow screen')
+      +portfolioImage('07', '4', 'Screenshot of the mobile navigation on a narrow screen')
+      +portfolioImage('07', '5', 'Screenshot of the programs page')
+      +portfolioImage('07', '6', 'Screenshot of the about page on a narrow screen')
+
+    +portfolioModal('08', 'Simple, Animating Form Cards', 'Animating form card design using JavaScript and CSS Keyframes')
+      +portfolioImage('08', '1', 'A screenshot of the animating form cards')
+      a.btn.btn--secondary.u-mgTop--sm(target="_blank", href="http://codepen.io/nicklemmon/pen/QEZvkb")
+        span.btn__iconContainer
+          include partials/svg/icon--codepen.pug
+        span.btn__txt Go to Codepen
+
+    +portfolioModal('09', 'Nicklemmon.com, 2014 Illustrated Design and Development', 'Illustrated, responsive web design using Bootstrap from 2014')
+      +portfolioImage('09', '1', 'Screenshot of the landing page - with a robot!')
+      +portfolioImage('09', '2', 'Screenshot of the landing page - with a dinosaur!')
+      +portfolioImage('09', '3', 'Angled view of the landing page on a wide screen')
+
+    +portfolioModal('10', 'UNC Department of Psychiatry Program Posters', 'Poster designs for a UNC Department of Psychiatry event')
+      +portfolioImage('10', '1', 'Two posters for the Hospital Transition Team and the Dialectical Behavioral Therapy program')
+
+    +portfolioModal('11', 'Big Picture Films Logo', 'Logo design with hand-drawn illustration for a wedding photography and videography business based in Atlanta, GA')
+      +portfolioImage('11', '1', 'Bow tie pen and ink illustration')
+      +portfolioImage('11', '2', 'Early bow tie concept pen and ink illustration')
+      +portfolioImage('11', '3', 'Alternate bow tie concept pen and ink illustration')
+      +portfolioImage('11', '4', 'Five bow tie concepts')
+      +portfolioImage('11', '5', 'Final logo design with type treatment, inverted')
+      +portfolioImage('11', '6', 'Final logo design with type treatment')
 
   //- 'My Skillset' section
   section.sect.sect--primary.sect--angle.u-slideUp.u-pdY--xl#skillset

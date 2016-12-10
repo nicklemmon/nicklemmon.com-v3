@@ -86,3 +86,24 @@
 .u-border--secondary {
   border-color: $color--secondary;
 }
+
+//== Max width utility classes
+.u-maxWidth--xs {
+  max-width: $breakpoint--xs;
+}
+
+.u-maxWidth--sm {
+  max-width: $breakpoint--sm;
+}
+
+.u-maxWidth--md {
+  max-width: $breakpoint--md;
+}
+
+.u-maxWidth--lg {
+  max-width: $breakpoint--lg;
+}
+
+.u-maxWidth--xl {
+  max-width: $breakpoint--xl;
+}

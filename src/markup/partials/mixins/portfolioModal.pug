@@ -1,14 +1,19 @@
-mixin portfolioModal(target)
+mixin portfolioModal(target, title, description)
   .modal__overlay.js-modalOverlay.is-hidden
     .modal.js-modal(data-target=target).is-hidden
       a.modal__closeBtn.js-modalClose
         span.u-txtHide Close the popup window
         include ../svg/icon--close.pug
 
-      if block
-        block
-      else
-        p There is no content :(
+      div.modal__header.u-txtAlign--c
+        h5.modal__heading #{title}
+        p.u-mgX--auto.u-maxWidth--xs #{description}
 
-      hr.u-border--primary.u-mgBottom--sm.u-mgTop--md
-      a.modal__closeText.js-modalClose Close
+      div.modal__contentContainer.u-txtAlign--c
+        if block
+          block
+        else
+          p There is no content :(
+
+      div.modal__footer
+        a.modal__closeText.js-modalClose Close
