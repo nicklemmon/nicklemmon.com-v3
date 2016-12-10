@@ -63,7 +63,7 @@ $list-o-columns: (
     @each $val in $list-o-columns {
       .gr__col--#{$val} {
         @include col(1);
-        padding-bottom: $spacing--lg; // ...and puts it on the column
+        padding-bottom: $spacing--md; // ...and puts it on the column
       }
     }
   }
@@ -81,7 +81,7 @@ $list-o-columns: (
     @each $val in $list-o-columns {
       .gr__col--#{$val} {
         @include col(1);
-        padding-bottom: $spacing--lg;
+        padding-bottom: $spacing--md;
       }
     }
   }
@@ -99,7 +99,7 @@ $list-o-columns: (
     @each $val in $list-o-columns {
       .gr__col--#{$val} {
         @include col(1);
-        padding-bottom: $spacing--lg;
+        padding-bottom: $spacing--md;
       }
     }
   }
@@ -117,7 +117,7 @@ $list-o-columns: (
     @each $val in $list-o-columns {
       .gr__col--#{$val} {
         @include col(1);
-        padding-bottom: $spacing--lg;
+        padding-bottom: $spacing--md;
       }
     }
   }
