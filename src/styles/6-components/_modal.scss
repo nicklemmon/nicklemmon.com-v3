@@ -48,6 +48,7 @@
 
 .modal__header {
   padding: $spacing--sm $spacing--xs;
+  border-bottom: 1px solid $color--grayLight;
 
   @media screen and (min-width: $breakpoint--sm) {
     padding: $spacing--md $spacing--sm;
@@ -75,8 +76,7 @@
 .modal__footer {
   padding: $spacing--sm;
   padding-top: $spacing--xs;
-  margin-top: $spacing--md;
-  border-top: 1px solid lighten($color--primary, 30%);
+  border-top: 1px solid $color--grayLight;
 }
 
 .modal__closeText {
