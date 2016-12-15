@@ -9,6 +9,8 @@
 
   30% {
     transform: translateY(-$spacing--sm);
+    visibility: hidden;
+    opacity: 0;
   }
 
   100% {
