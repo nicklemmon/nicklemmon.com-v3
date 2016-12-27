@@ -19,7 +19,7 @@ Portfolio.Global.Modal = {
   openModal: function( $thisElem ) {
     var thisHref = $thisElem.attr('href');
     var $targetModal = $("[data-target='" + thisHref + "']");
-    var $targetModalImages = $targetModal.find('.portfolioImg__img');
+    var $targetModalImages = $targetModal.find('.portfolioImage__img');
     var $parentOverlay = $targetModal.closest('.modal__overlay');
 
     $targetModal.removeClass('is-hidden').addClass('is-visible');
