@@ -19,11 +19,26 @@ Portfolio.Global.Modal = {
   openModal: function( $thisElem ) {
     var thisHref = $thisElem.attr('href');
     var $targetModal = $("[data-target='" + thisHref + "']");
+    var $targetModalImages = $targetModal.find('.portfolioImage__img');
     var $parentOverlay = $targetModal.closest('.modal__overlay');
 
     $targetModal.removeClass('is-hidden').addClass('is-visible');
     $parentOverlay.removeClass('is-hidden').addClass('is-visible');
     this.$body.addClass('u-overflow--hidden');
+
+    $targetModalImages.each(function() { // lazy loading loop to replace data attribute temporarily storing path for the image
+      if ( $(this)[0].hasAttribute('srcset') ) {
+        var $thisDataVal = $(this).attr('data-srcset');
+
+        $(this).attr('srcset', $thisDataVal);
+      }
+
+      else if ( $(this)[0].hasAttribute('src') ) {
+        var $thisDataVal = $(this).attr('data-src');
+
+        $(this).attr('src', $thisDataVal);
+      }
+    })
   },
   closeModal: function() {
     this.$modal.removeClass('is-visible').addClass('is-hidden');
