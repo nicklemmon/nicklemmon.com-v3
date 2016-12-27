@@ -13,4 +13,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
   if ($('.js-menu').length) {
     Portfolio.Global.MenuBtn.init();
   };
+
+  //== ajax object
+  if($('.js-ajaxTrigger').length) {
+    Portfolio.Global.Ajax.init();
+  };
 });
