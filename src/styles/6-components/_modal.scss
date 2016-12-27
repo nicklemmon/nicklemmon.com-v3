@@ -55,6 +55,10 @@
   }
 }
 
+.modal__heading {
+  line-height: 1.5;
+}
+
 .modal__closeBtn {
   @include size(20px);
   position: absolute;
