@@ -2,7 +2,7 @@
 
 .modal {
   max-width: $breakpoint--sm;
-  margin: 0 auto;
+  margin: 0 auto $spacing--sm auto; // bottom margin to address Firefox defect where there was no space below the modal
   background: $color--white;
   border-radius: $borderRadius;
   box-shadow: 0 $spacing--sm 10px rgba(darken($color--gray, 50%), 0.2);
@@ -85,7 +85,7 @@
 
 .modal__closeText {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 1em;
   cursor: pointer;
   color: $color--primary;
   transition: color $transitionDur $transitionEasing;

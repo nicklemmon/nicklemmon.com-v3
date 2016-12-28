@@ -183,7 +183,7 @@ block content
       hr.u-border--base
       p Send me your name and email address and I'll get back with you shortly. I won't share your information with anyone.
 
-      form.form.u-mgTop--lg
+      form.form.u-mgTop--lg(action="https://formspree.io/nick.lemmon@gmail.com", method="POST")
         .gr.gr--xs
           fieldset.gr__col--1-2.form__fieldset
             input.form__input(id="first-name", name="first-name", type="text", placeholder="First Name", required)
