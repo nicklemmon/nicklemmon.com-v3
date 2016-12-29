@@ -5,6 +5,7 @@ todo.md
 dreamhost
 dreamhost.pub
 post-receive
+.htaccess
 
 # Directories
 /node_modules/
