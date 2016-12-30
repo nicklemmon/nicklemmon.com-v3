@@ -101,7 +101,7 @@ gulp.task('scripts', function() {
 // Minify images
 gulp.task('minifyImages', function() {
   return gulp.src(base.src + path.images + '**/*')
-    .pipe(imageMin())
+    .pipe(imageMin({ progressive: true }))
     .pipe(gulp.dest(base.dist + path.images))
 })
 
