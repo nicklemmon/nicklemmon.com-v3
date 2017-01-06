@@ -10,6 +10,7 @@ var swig = require('gulp-swig');
 var data = require('gulp-data');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
+var uncss = require('gulp-uncss');
 var globSass = require('gulp-sass-glob');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
@@ -82,6 +83,9 @@ gulp.task('styles', function() {
     .pipe(globSass())
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+    .pipe(uncss({
+      html: [base.dist + '**/*.html']
+    }))
     .pipe(gulp.dest(base.dist + path.styles))
 })
 
