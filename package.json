@@ -2,7 +2,7 @@
   "name": "nicklemmon.com-v3",
   "version": "0.0.0",
   "description": "Portfolio for Nick Lemmon. Again. The Return. Part 3. Lost in New York.",
-  "main": "index.js",
+  "main": "gulp.js",
   "scripts": {
     "clean": "rm -r _dist/*",
     "build": "webpack -p"
@@ -23,6 +23,7 @@
     "gulp-sass-glob": "^1.0.6",
     "gulp-swig": "^0.8.0",
     "gulp-uglify": "^2.0.0",
+    "gulp-uncss": "^1.0.6",
     "gulp-webp": "^2.3.0",
     "snapsvg-cjs": "0.0.4"
   }

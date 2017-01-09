@@ -10,6 +10,7 @@ var swig = require('gulp-swig');
 var data = require('gulp-data');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
+var uncss = require('gulp-uncss');
 var globSass = require('gulp-sass-glob');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
@@ -26,7 +27,7 @@ var reload = browserSync.reload;
 // Base paths
 var base = {
   src: './src/',
-  dist: './_dist/'
+  dist: './public/'
 }
 
 // Sub paths
@@ -57,7 +58,7 @@ gulp.task('clean', function() {
 // BrowerSync stuff for a local server and cross-browser refreshing
 gulp.task('browser-sync', function() {
     browserSync({
-        server: "./_dist",
+        server: "./public",
         port: 1986
     })
 })
@@ -82,6 +83,9 @@ gulp.task('styles', function() {
     .pipe(globSass())
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+    .pipe(uncss({
+      html: [base.dist + '**/*.html']
+    }))
     .pipe(gulp.dest(base.dist + path.styles))
 })
 
