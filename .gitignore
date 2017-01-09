@@ -9,4 +9,4 @@ post-receive
 
 # Directories
 /node_modules/
-/_dist/
+/public/

@@ -27,7 +27,7 @@ var reload = browserSync.reload;
 // Base paths
 var base = {
   src: './src/',
-  dist: './_dist/'
+  dist: './public/'
 }
 
 // Sub paths
@@ -58,7 +58,7 @@ gulp.task('clean', function() {
 // BrowerSync stuff for a local server and cross-browser refreshing
 gulp.task('browser-sync', function() {
     browserSync({
-        server: "./_dist",
+        server: "./public",
         port: 1986
     })
 })
