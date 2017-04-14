@@ -1,6 +1,6 @@
 nav.nav
   //- a.nav__brand(href="/index.html") Nick Lemmon - commented out
-  a.nav__menuBtn.js-menuBtn(tabindex="0") Menu
+  a.nav__menuBtn.js-menuBtn(tabindex="0", role="button", href="javascript:void(0)") Menu
 
   .nav__menu.js-menu.is-collapsed
     ul.nav__menuList
@@ -25,6 +25,6 @@ nav.nav
           include svg/icon--contact.pug
           | Send a Message
 
-    a.nav__closeBtn.js-menuBtn(tabindex="0")
+    a.nav__closeBtn.js-menuBtn(tabindex="0", role="button", href="javascript:void(0)")
       span.u-txtHide Close the menu
       include svg/icon--close.pug
