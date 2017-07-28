@@ -123,12 +123,17 @@ gulp.task('images', ['minifyImages', 'webP'])
 //== Run Those Tasks (IF YOU DARE) ==//
 ///////////////////////////////////////
 
-// Default task
-gulp.task('default', ['clean'], function() {
+// Build task
+gulp.task('build', ['clean'], function() {
   gulp.run('markup');
   gulp.run('styles');
   gulp.run('scripts');
   gulp.run('images');
+})
+
+// Default task
+gulp.task('default', function() {
+  gulp.run('build');
   gulp.run('watch');
 })
 
