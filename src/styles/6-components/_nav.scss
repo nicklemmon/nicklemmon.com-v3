@@ -36,10 +36,6 @@
   &:active {
     background: rgba($color--primaryDark, 0.35);
   }
-
-  &:focus {
-    outline: none;
-  }
 }
 
 .nav__menu {
@@ -100,10 +96,6 @@
     }
   }
 
-  &:focus {
-    outline: none;
-  }
-
   @media screen and (min-width: $breakpoint--sm) {
     text-align: left;
   }
@@ -125,9 +117,5 @@
   &:hover,
   &:focus {
     animation: growOut $transitionDur $transitionEasing forwards;
-  }
-
-  &:focus {
-    outline: none;
   }
 }

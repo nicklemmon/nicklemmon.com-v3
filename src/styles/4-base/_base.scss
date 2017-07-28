@@ -14,3 +14,8 @@ source {
   width: 100%;
   height: auto;
 }
+
+*:focus {
+  outline: 2px dashed currentColor;
+  outline-offset: -2px;
+}
