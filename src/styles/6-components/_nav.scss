@@ -26,6 +26,7 @@
   text-shadow: 0 0.1rem 10px $color--primaryDark;
   border: 2px solid $color--white;
   border-radius: $borderRadius;
+  text-decoration: none;
   transition: background ($transitionDur * 1.5) $transitionEasing;
   cursor: pointer;
   background: rgba(0, 0, 0, 0);
@@ -34,10 +35,6 @@
   &:focus,
   &:active {
     background: rgba($color--primaryDark, 0.35);
-  }
-
-  &:focus {
-    outline: none;
   }
 }
 
@@ -99,10 +96,6 @@
     }
   }
 
-  &:focus {
-    outline: none;
-  }
-
   @media screen and (min-width: $breakpoint--sm) {
     text-align: left;
   }
@@ -124,9 +117,5 @@
   &:hover,
   &:focus {
     animation: growOut $transitionDur $transitionEasing forwards;
-  }
-
-  &:focus {
-    outline: none;
   }
 }

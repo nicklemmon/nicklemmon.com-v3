@@ -35,16 +35,17 @@
 
   // is-inactive/is-active added based on JS behavior
   &.is-active,
-  &:hover {
-    animation: cardHoverIn $transitionDur $transitionEasing forwards;
-  }
-
+  &:hover,
   &:focus {
-    outline: none;
+    animation: cardHoverIn $transitionDur $transitionEasing forwards;
   }
 
   @media screen and (min-width: $breakpoint--xs) {
     @include size(200px);
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
