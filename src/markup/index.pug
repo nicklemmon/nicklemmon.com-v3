@@ -31,11 +31,12 @@ block content
       +portfolioCard('09', 'Nicklemmon.com, 2014')
       +portfolioCard('10', 'UNC Department of Psychiatry Program Posters')
       +portfolioCard('11', 'Big Picture Films Logo')
+      +portfolioCard('12', 'CSS Santa')
 
-    //- Modals/lightboxes used to display portfolio content
+    //- Mixins used to generate modals with portfolio content
     include partials/mixins/portfolioModal.pug
-    //- Modal images mixin
     include partials/mixins/portfolioImage.pug
+    include partials/mixins/portfolioBtn.pug
 
     //- For the modal, pass in the item number AKA the directory number
     //- For each image, pass in the same item number and
@@ -44,17 +45,11 @@ block content
 
     +portfolioModal('02', 'Toggling Mobile Menu', 'Toggling mobile menu concept that simulates sliding in sync with the button itself.')
       +portfolioImage('02', '1', 'Screenshot of the Toggling Mobile Menu')
-      a.btn.btn--secondary.u-mgY--sm(target="_blank", href="http://codepen.io/nicklemmon/pen/Krxdvv")
-        span.btn__iconContainer
-          include partials/svg/icon--codepen.pug
-        span.btn__txt Go to Codepen
+      +portfolioBtn('http://codepen.io/nicklemmon/pen/Krxdvv')
 
     +portfolioModal('03', 'Toggling Switch', 'A toggling switch with keyframe animation.')
       +portfolioImage('03', '1', 'Screenshot of the Toggling Switch')
-      a.btn.btn--secondary.u-mgY--sm(target="_blank", href="http://codepen.io/nicklemmon/pen/ZQqoON")
-        span.btn__iconContainer
-          include partials/svg/icon--codepen.pug
-        span.btn__txt Go to Codepen
+      +portfolioBtn('http://codepen.io/nicklemmon/pen/ZQqoON')
 
     +portfolioModal('04', 'Sketchbook Illustrations', 'Various drawings in notebooks and sketchbooks over the last few years.')
       +portfolioImage('04', '1', 'Illustration of a dragon')
@@ -83,10 +78,7 @@ block content
 
     +portfolioModal('08', 'Simple, Animating Form Cards', 'Animating form card design using JavaScript and CSS Keyframes')
       +portfolioImage('08', '1', 'A screenshot of the animating form cards')
-      a.btn.btn--secondary.u-mgY--sm(target="_blank", href="http://codepen.io/nicklemmon/pen/QEZvkb")
-        span.btn__iconContainer
-          include partials/svg/icon--codepen.pug
-        span.btn__txt Go to Codepen
+      +portfolioBtn('http://codepen.io/nicklemmon/pen/QEZvkb')
 
     +portfolioModal('09', 'Nicklemmon.com, 2014', 'Illustrated, responsive web design using Bootstrap from 2014')
       +portfolioImage('09', '1', 'Screenshot of the landing page - with a robot!')
@@ -103,6 +95,10 @@ block content
       +portfolioImage('11', '4', 'Five bow tie concepts')
       +portfolioImage('11', '5', 'Final logo design with type treatment, inverted')
       +portfolioImage('11', '6', 'Final logo design with type treatment')
+      
+    +portfolioModal('12', 'CSS Santa', 'Santa Claus built and animated with CSS')
+      +portfolioImage('12', '1', 'CSS Santa Screenshot')
+      +portfolioBtn('https://codepen.io/nicklemmon/pen/KNrVoa')
 
   //- 'My Skillset' section
   section.sect.sect--primary.sect--angle.u-slideUp.u-pdY--xl#skillset
