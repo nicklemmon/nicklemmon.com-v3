@@ -1,5 +1,5 @@
 mixin portfolioCard(itemNum, altText)
-  a.card.card--btn.js-modalOpen.u-pd--0(tabindex="0",href=itemNum)
+  a.card.card--btn.js-modalOpen.u-pd--0(tabindex="0",href=itemNum, role="button")
     span.u-txtHide #{altText} - Opens popup view of the portfolio item
     picture.card__img
       source(srcset="/images/portfolio/" + itemNum + "/thumb.webp", alt=altText, type="image/webp")
