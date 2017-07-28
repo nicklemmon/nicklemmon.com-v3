@@ -1,5 +1,6 @@
 'use strict';
 
+
 //////////////////////////
 //== Requiring things ==//
 //////////////////////////
@@ -19,6 +20,7 @@ var gulp = require('gulp'),
     webP = require('gulp-webp'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload;
+
 
 //////////////////////////
 //== Global variables ==//
