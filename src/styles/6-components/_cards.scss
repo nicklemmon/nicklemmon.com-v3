@@ -31,14 +31,12 @@
   margin: $spacing--sm;
   cursor: pointer;
   overflow: hidden;
-  transition: box-shadow $transitionDur $transitionEasing;
   animation: cardHoverOut $transitionDur $transitionEasing forwards;
 
   // is-inactive/is-active added based on JS behavior
   &.is-active,
   &:hover {
     animation: cardHoverIn $transitionDur $transitionEasing forwards;
-    @include boxShadow(30px);
   }
 
   &:focus {
