@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', function(event) {
   //== modals/lightboxes
   if ($('.js-modalOpen').length) {
-    Portfolio.Global.Modal.init();
+    Portfolio.Modal.init();
   };
 
   //== skill cards
   if ($('.js-skillCard').length) {
-    Portfolio.Global.SkillCard.init();
+    Portfolio.SkillCard.init();
   };
 
   //== nav menu
   if ($('.js-menu').length) {
-    Portfolio.Global.MenuBtn.init();
+    Portfolio.MenuBtn.init();
   };
 
   //== ajax object
   if($('.js-ajaxTrigger').length) {
-    Portfolio.Global.Ajax.init();
+    Portfolio.Ajax.init();
   };
 });
