@@ -1,0 +1,17 @@
+{
+  "name": "nicklemmon.com-v3",
+  "authors": [
+    "Nick Lemmon <nick.lemmon@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~3.2.1",
+    "modernizr": "~2.8.3"
+  }
+}

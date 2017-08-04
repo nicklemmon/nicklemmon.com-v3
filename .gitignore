@@ -10,3 +10,4 @@ post-receive
 # Directories
 /node_modules/
 /public/
+/bower_components/

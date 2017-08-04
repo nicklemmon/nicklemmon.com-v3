@@ -38,7 +38,8 @@ var path = {
   markup: 'markup/',
   js: 'js/',
   data: 'data/',
-  images: 'images/'
+  images: 'images/',
+  bower: 'bower_components/'
 }
 
 // Get some data
@@ -91,6 +92,8 @@ gulp.task('styles', function() {
 // Concat and uglify the JavaScript
 gulp.task('scripts', function() {
   return gulp.src([
+    './' + path.bower + 'jquery/dist/jquery.js',
+    './' + path.bower + 'modernizr/modernizr.js',
     base.src + path.js + '1-vendor/*.js',
     base.src + path.js + '2-base/*.js',
     base.src + path.js + '3-modules/*.js',
